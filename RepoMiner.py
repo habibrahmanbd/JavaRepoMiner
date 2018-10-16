@@ -18,22 +18,41 @@ def WriteReport(Result):
     return
 
 
+def isParameterAdded(fromStatement, toStatement):
+    uptoOpen = fromStatement.find('(')
+    uptoClose = fromStatement.find(')')
+    subFromStatement = fromStatement[1:uptoOpen]
+    paraFromStatement = (fromStatement[uptoOpen:uptoClose]).split(',')
+    uptoOpen = toStatement.find('(')
+    uptoClose = toStatement.find(')')
+    subToStatement = toStatement[1:uptoOpen]
+    paraToStatement = (toStatement[uptoOpen:uptoClose]).split(',')
+    if subFromStatement == subToStatement and len(paraFromStatement) != len(paraToStatement):
+        return True
+    return False
+
+
+def isAnyInvalidCharacter(fromStatement):
+    invalidCharacter = ['=', '.print', '//'] #Method Signature Can't contain these
+    validation = 0
+    for j in invalidCharacter:
+        if fromStatement.find(j)>=0:
+            validation = validation | 1
+    return validation
+
 
 dataTypes = ['void', 'int', 'double', 'float', 'String', 'boolean', 'char', 'long', 'short', 'byte']
 
 
-def isMethod(statement):
+def isMethod(fromStatement, toStatement):
 #    print(statement)
-    for i in dataTypes:
-        dataTypeIn = statement.find(i) #Should have a return data type
-        openingParenthesis = statement.find('(')
-        invalidCharacter = ['=', '.print', '//'] #Method Signature Can't contain these
-        validation = 0
-        for j in invalidCharacter:
-            if statement.find(j)>=0:
-                validation = validation | 1
-        if dataTypeIn>0 and openingParenthesis > dataTypeIn and validation == 0:
-            return True
+    if isParameterAdded(fromStatement, toStatement) == True:
+        for i in dataTypes:
+            dataTypeIn = fromStatement.find(i) #Should have a return data type
+            openingParenthesis = fromStatement.find('(')
+            validation = isAnyInvalidCharacter(fromStatement) # Has invalid character or not
+            if dataTypeIn>0 and openingParenthesis > dataTypeIn and validation == 0:
+                return True
     return False
 
 
@@ -45,16 +64,17 @@ def RepoMiner(gitName):
                 totalRows = len(mod.diff.splitlines())
                 lines = mod.diff.splitlines()
                 for rowNumber in range(totalRows):
-                    if lines[rowNumber][0]== '-' and isMethod(lines[rowNumber]): # - Stands for delete and + stands for addition
-                        SourceCode = mod.source_code
-                        Hash = commit.hash
-                        OldMethodSignature = str(lines[rowNumber])
-                        NewMethodSignature = str(lines[rowNumber+1])
-                        upto = OldMethodSignature.find(')')+1
-                        OldMethodSignature = OldMethodSignature[1:upto]
-                        upto = NewMethodSignature.find(')')+1
-                        NewMethodSignature = NewMethodSignature[1:upto]
-                        WriteToCSV.append([Hash, SourceCode, OldMethodSignature, NewMethodSignature])
+                    if rowNumber < (totalRows-1):
+                        if lines[rowNumber][0]== '-' and isMethod(lines[rowNumber], lines[rowNumber+1]): # - Stands for delete and + stands for addition
+                            SourceCode = ""
+                            Hash = commit.hash
+                            OldMethodSignature = str(lines[rowNumber])
+                            NewMethodSignature = str(lines[rowNumber+1])
+                            upto = OldMethodSignature.find(')')+1
+                            OldMethodSignature = OldMethodSignature[1:upto]
+                            upto = NewMethodSignature.find(')')+1
+                            NewMethodSignature = NewMethodSignature[1:upto]
+                            WriteToCSV.append([Hash, SourceCode, OldMethodSignature, NewMethodSignature])
     return WriteToCSV
 
 

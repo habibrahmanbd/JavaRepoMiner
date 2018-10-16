@@ -11,11 +11,11 @@ from pydriller import RepositoryMining
 
 
 def WriteReport(Result):
-    with open("Result.csv", "wb") as fileName:
+    with open("Result.csv", "w") as fileName:
         writer = csv.writer(fileName)
-        for row in Result:
-            print(row)
-            writer.writerows(row)
+        writer.writerow(["Commit SHA", "Java File", "Old function signature", "New function signature"])
+        writer.writerows(Result)
+    return
 
 
 
@@ -25,48 +25,41 @@ dataTypes = ['void', 'int', 'double', 'float', 'String', 'boolean', 'char', 'lon
 def isMethod(statement):
 #    print(statement)
     for i in dataTypes:
-        dataTypeIn = statement.find(i)
+        dataTypeIn = statement.find(i) #Should have a return data type
         openingParenthesis = statement.find('(')
-        invalidCharacter = '='
-        validation = statement.find(invalidCharacter)
-        if dataTypeIn>0 and openingParenthesis > dataTypeIn and validation < 0 :
-            return True;
+        invalidCharacter = ['=', '.print', '//'] #Method Signature Can't contain these
+        validation = 0
+        for j in invalidCharacter:
+            if statement.find(j)>=0:
+                validation = validation | 1
+        if dataTypeIn>0 and openingParenthesis > dataTypeIn and validation == 0:
+            return True
+    return False
 
 
 def RepoMiner(gitName):
     WriteToCSV = []
     for commit in RepositoryMining(gitName).traverse_commits():
-    #    print(commit.hash)
-#        print(commit.author.name)
-    #    print(commit.author_date)
         for mod in commit.modifications:
-    #        print(mod.filename)
-    #        print((mod.filename).find('java')>0)
             if (mod.filename).find('java')>0:
-    #            print(mod.filename + " is changed!")
                 totalRows = len(mod.diff.splitlines())
-    #            print(totalRows)
                 lines = mod.diff.splitlines()
                 for rowNumber in range(totalRows):
-                    if lines[rowNumber][0]== '-' and isMethod(lines[rowNumber]):
-#                        print(mod.source_code)
-#                        print(lines[rowNumber])
-#                        print(lines[rowNumber+1])
-                        SourceCode = ""+mod.source_code
+                    if lines[rowNumber][0]== '-' and isMethod(lines[rowNumber]): # - Stands for delete and + stands for addition
+                        SourceCode = mod.source_code
                         Hash = commit.hash
-
-                        OldMethodSignature = ""+str(lines[rowNumber])
-                        NewMethodSignature = ""+str(lines[rowNumber+1])
-                        upto = OldMethodSignature.find[')']+1
-                        print(upto)
-                        print(""+str(Hash)+" "+OldMethodSignature[1:upto])
+                        OldMethodSignature = str(lines[rowNumber])
+                        NewMethodSignature = str(lines[rowNumber+1])
+                        upto = OldMethodSignature.find(')')+1
+                        OldMethodSignature = OldMethodSignature[1:upto]
+                        upto = NewMethodSignature.find(')')+1
+                        NewMethodSignature = NewMethodSignature[1:upto]
                         WriteToCSV.append([Hash, SourceCode, OldMethodSignature, NewMethodSignature])
     return WriteToCSV
 
 
 #if __name__== "main":
-GitFileName = input()
-Result = RepoMiner(GitFileName)
-#print(Result)
-#WriteReport(Result)
+GitFileName = input()       #Repository name with Path
+Result = RepoMiner(GitFileName) #Finds the Result
+WriteReport(Result) #Print to CSV
 

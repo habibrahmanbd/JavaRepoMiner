@@ -41,7 +41,8 @@ After running the _RepoMiner.py_ module, it will prompt for input. The input is 
 ## Run
 To run the code:
 ```
-$git clone https://github.com/habibrahmanbd/JavaRepoMiner.git
+$ git clone https://github.com/habibrahmanbd/JavaRepoMiner.git
+$ python RepoMiner.py
 <RepoNameWIthDirectory>
 ```
 

@@ -38,6 +38,13 @@ pip install pydriller
 
 After running the _RepoMiner.py_ module, it will prompt for input. The input is the JAVA code repository. For example, we have a repo named _JavaTestingRepo_ in parent directory, then input will be like _../JavaTestingRepo_. Then it write the result in this project in a folder name output as _Result.csv_.
 
+## Run
+To run the code:
+```
+$git clone https://github.com/habibrahmanbd/JavaRepoMiner.git
+<RepoNameWIthDirectory>
+```
+
 ## Datasets
 
 Two popular JAVA git repo, _java-design-patterns_ [[2](#references)] and _RxJava_ [[3](#references)] is used as dataset. _JavaTestingRepo_ [[4](#references)] is a demo git repo for running this code while developing.
@@ -52,11 +59,11 @@ Two popular JAVA git repo, _java-design-patterns_ [[2](#references)] and _RxJava
 
 - [1] https://github.com/ishepard/pydriller
 
-- [2] https://github.com/iluwatar/java-design-patterns
+- [2]: https://github.com/iluwatar/java-design-patterns
 
-- [3] https://github.com/ReactiveX/RxJava
+- [3]: https://github.com/ReactiveX/RxJava
 
-- [4] https://github.com/habibrahmanbd/JavaTestingRepo
+- [4]: https://github.com/habibrahmanbd/JavaTestingRepo
 
 ## Acknowledgement:
 I would like to thank <a href = "https://sarahnadi.org/" > Sarah Nadi</a>, Assistant Professor in the Department of Computing Science at the University of Alberta for assigning me this coding task.

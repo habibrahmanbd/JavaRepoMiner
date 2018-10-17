@@ -52,11 +52,11 @@ Two popular JAVA git repo, _java-design-patterns_ [[2](#references)] and _RxJava
 
 - [1] https://github.com/ishepard/pydriller
 
-- [2]: https://github.com/iluwatar/java-design-patterns
+- [2] https://github.com/iluwatar/java-design-patterns
 
-- [3]: https://github.com/ReactiveX/RxJava
+- [3] https://github.com/ReactiveX/RxJava
 
-- [4]: https://github.com/habibrahmanbd/JavaTestingRepo
+- [4] https://github.com/habibrahmanbd/JavaTestingRepo
 
 ## Acknowledgement:
 I would like to thank <a href = "https://sarahnadi.org/" > Sarah Nadi</a>, Assistant Professor in the Department of Computing Science at the University of Alberta for assigning me this coding task.

@@ -43,7 +43,8 @@ To run the code:
 ```
 $ git clone https://github.com/habibrahmanbd/JavaRepoMiner.git
 $ python RepoMiner.py
-<RepoNameWIthDirectory>
+Enter the git name with path: <RepoNameWIthDirectory>
+Output printed successfully...
 ```
 
 ## Datasets

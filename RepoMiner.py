@@ -80,8 +80,9 @@ def RepoMiner(gitName):
     return WriteToCSV
 
 
-#if __name__== "main":
-GitFileName = input()       #Repository name with Path
-Result = RepoMiner(GitFileName) #Finds the Result
-WriteReport(Result) #Print to CSV
+if __name__== "__main__":
+    GitFileName = input("Enter the git name with path: ")       #Repository name with Path
+    Result = RepoMiner(GitFileName) #Finds the Result
+    WriteReport(Result) #Print to CSV
+    print("\nOutput printed successfully...")
 

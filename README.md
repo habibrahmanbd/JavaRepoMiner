@@ -68,4 +68,4 @@ Two popular JAVA git repo, _java-design-patterns_ [[2](#references)] and _RxJava
 - [4] https://github.com/habibrahmanbd/JavaTestingRepo
 
 ## Acknowledgement:
-I would like to thank <a href = "https://sarahnadi.org/" > Sarah Nadi</a>, Assistant Professor in the Department of Computing Science at the University of Alberta for assigning me this coding task.
+I would like to thank <a href = "https://sarahnadi.org/" >Dr. Sarah Nadi</a>, Assistant Professor at the Department of Computing Science of the University of Alberta for assigning me this coding task.

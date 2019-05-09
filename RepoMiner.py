@@ -35,14 +35,26 @@ def isParameterAdded(fromStatement, toStatement):  # Old Method , New Method
 
 def isClassAdded(fromStatement, toStatement):   # Old Class, New Class
     uptoOpen = fromStatement.find('{')
-    fromClass = fromStatement.find('Class')
+    fromClass = fromStatement.find('Class ')
     subFrom = fromStatement[fromClass:uptoOpen] # Substring between 'Class' and '{'
     uptoOpen = toStatement.find('{')
-    fromClass = toStatement.find('Class')
+    fromClass = toStatement.find('Class ')
     subTo = toStatement[fromClass:uptoOpen]  # Substring between 'Class' and '{'
     if(subFrom != subTo):
         return True
-    return False;
+    return False
+
+def isLibraryAdded(fromStatement, toStatement):   # Old Class, New Class
+    uptoOpen = fromStatement.find(';')
+    fromClass = fromStatement.find('import ')
+    subFrom = fromStatement[fromClass:uptoOpen] # Substring between 'Class' and '{'
+    uptoOpen = toStatement.find(';')
+    fromClass = toStatement.find('import ')
+    subTo = toStatement[fromClass:uptoOpen]  # Substring between 'Class' and '{'
+    if(subFrom != subTo):
+        return True
+    return False
+
 
 def isAnyInvalidCharacter(fromStatement):  # Return 0 if there is not invalid substring for method, 1 otherwise
     invalidCharacter = ['=', '.print', '//', '%', '""', '" "', '.']  # Method Signature Can't contain these
@@ -74,6 +86,11 @@ def isClass(fromStatement, toStatement): # To check Class modification
         return True
     return False
 
+def isLibrary(fromStatement, toStatement): # To check Library modification
+    if isLibraryAdded(fromStatement, toStatement) == True:
+        return True
+    return False
+
 
 def RepoMiner(gitName):
     WriteToCSV = []
@@ -85,19 +102,32 @@ def RepoMiner(gitName):
                 for rowNumber in range(totalRows):
                     if rowNumber < (totalRows - 1):
                         if len(lines[rowNumber]) > 0 and len(lines[rowNumber + 1]) > 0:
-                            if lines[rowNumber][0] == '-' and lines[rowNumber + 1][0] == '+' and isMethod(
-                                    lines[rowNumber], lines[
-                                        rowNumber + 1]):  # A deletion and after that an addition of methods with parameter addition
-                                SourceCode = mod.source_code  # New Source code
-                                SourceFile = mod.filename # File Changed
-                                Hash = commit.hash  # Commit SHA
-                                OldMethodSignature = str(lines[rowNumber])
-                                NewMethodSignature = str(lines[rowNumber + 1])
-                                upto = OldMethodSignature.find(')') + 1
-                                OldMethodSignature = OldMethodSignature[1:upto]  # Extracting the old function Signature
-                                upto = NewMethodSignature.find(')') + 1
-                                NewMethodSignature = NewMethodSignature[1:upto]  # Extracting the new function signature
-                                WriteToCSV.append([Hash, SourceFile, OldMethodSignature, NewMethodSignature])  # Ready for report printing
+                            if lines[rowNumber][0] == '-' and lines[rowNumber + 1][0] == '+':
+                                if isMethod(lines[rowNumber], lines[rowNumber + 1]):  # A deletion and after that an addition of methods with parameter addition
+                                    SourceCode = mod.source_code  # New Source code
+                                    SourceFile = mod.filename # File Changed
+                                    Hash = commit.hash  # Commit SHA
+                                    OldMethodSignature = str(lines[rowNumber])
+                                    NewMethodSignature = str(lines[rowNumber + 1])
+                                    upto = OldMethodSignature.find(')') + 1
+                                    OldMethodSignature = OldMethodSignature[1:upto]  # Extracting the old function Signature
+                                    upto = NewMethodSignature.find(')') + 1
+                                    NewMethodSignature = NewMethodSignature[1:upto]  # Extracting the new function signature
+                                    WriteToCSV.append([Hash, SourceFile, OldMethodSignature, NewMethodSignature])  # Ready for report printing
+                                elif isClass( lines[rowNumber], lines[ rowNumber + 1]):  # A deletion and after that an addition of Class with parameter addition
+                                    SourceCode = mod.source_code  # New Source code
+                                    SourceFile = mod.filename  # File Changed
+                                    Hash = commit.hash  # Commit SHA
+                                    OldClass = str(lines[rowNumber])
+                                    NewClass = str(lines[rowNumber + 1])
+                                    WriteToCSV.append([Hash, SourceFile, OldClass, NewClass])  # Ready for report printing
+                                elif isLibrary( lines[rowNumber], lines[ rowNumber + 1]):  # A deletion and after that an addition of Library with parameter addition
+                                    SourceCode = mod.source_code  # New Source code
+                                    SourceFile = mod.filename  # File Changed
+                                    Hash = commit.hash  # Commit SHA
+                                    OldLibrary = str(lines[rowNumber])
+                                    NewLibrary = str(lines[rowNumber + 1])
+                                    WriteToCSV.append([Hash, SourceFile, OldLibrary, NewLibrary])  # Ready for report printing
     return WriteToCSV
 
 

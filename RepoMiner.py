@@ -7,6 +7,7 @@ Created on Mon Oct 15 19:23:02 2018
 @email: habib[dot]rahman[at]uits[dot]edu[dot]bd
 """
 import csv
+
 from pydriller import RepositoryMining
 
 
@@ -33,25 +34,90 @@ def isParameterAdded(fromStatement, toStatement):  # Old Method , New Method
     return False
 
 
-def isClassAdded(fromStatement, toStatement):   # Old Class, New Class
+def isClassAdded(fromStatement, toStatement):  # Old Class, New Class
     uptoOpen = fromStatement.find('{')
     fromClass = fromStatement.find('Class ')
-    subFrom = fromStatement[fromClass:uptoOpen] # Substring between 'Class' and '{'
+    subFrom = fromStatement[fromClass:uptoOpen]  # Substring between 'Class' and '{'
     uptoOpen = toStatement.find('{')
     fromClass = toStatement.find('Class ')
     subTo = toStatement[fromClass:uptoOpen]  # Substring between 'Class' and '{'
-    if(subFrom != subTo):
+    if (subFrom != subTo):
         return True
     return False
 
-def isLibraryAdded(fromStatement, toStatement):   # Old Class, New Class
+
+def isLibraryAdded(fromStatement, toStatement):  # Old Class, New Class
     uptoOpen = fromStatement.find(';')
     fromClass = fromStatement.find('import ')
-    subFrom = fromStatement[fromClass:uptoOpen] # Substring between 'Class' and '{'
+    subFrom = fromStatement[fromClass:uptoOpen]  # Substring between 'Class' and '{'
     uptoOpen = toStatement.find(';')
     fromClass = toStatement.find('import ')
     subTo = toStatement[fromClass:uptoOpen]  # Substring between 'Class' and '{'
-    if(subFrom != subTo):
+    if (subFrom != subTo):
+        return True
+    return False
+
+
+def isFor(fromStatement, toStatement):  # Old Loop, New Loop
+    fP = fromStatement.find('for')
+    bP1 = fromStatement.find('(')
+    sP1 = fromStatement.find(';')
+    sP2 = fromStatement.find(';')
+    bP2 = fromStatement.find(')')
+
+    fP_to = toStatement.find('for')
+    bP1_to = toStatement.find('(')
+    sP1_to = toStatement.find(';')
+    sP2_to = toStatement.find(';')
+    bP2_to = toStatement.find(')')
+
+    if (fP >= 0 and fP < bP1 and bP1 < sP1 and sP1 < sP2 and sP2 < bP2) and (
+            fP_to >= 0 and fP_to < bP1_to and bP1_to < sP1_to and sP1_to < sP2_to and sP2_to < bP2_to):
+        return True
+    return False
+
+
+def isWhile(fromStatement, toStatement):  # Old Loop, New Loop
+    fP = fromStatement.find('while')
+    bP1 = fromStatement.find('(')
+    bP2 = fromStatement.find(')')
+
+    fP_to = toStatement.find('while')
+    bP1_to = toStatement.find('(')
+    bP2_to = toStatement.find(')')
+
+    if (fP >= 0 and fP < bP1 and bP1 < bP2) and (fP_to >= 0 and fP_to < bP1_to and bP1_to < bP2_to):
+        return True
+    return False
+
+
+def notComment(fromStatement, toStatement):
+    fS = fromStatement.find('*')
+    fSL = fromStatement.find('/')
+
+    tS = toStatement.find('*')
+    tSL = toStatement.find('/')
+
+    flagF = flagT = True
+
+    for i in range(1, fS):
+        if fromStatement[i] != ' ':
+            flagF = False
+            break
+    for i in range(1, fSL):
+        if fromStatement[i] != ' ':
+            flagF = False
+            break
+    for i in range(1, tS):
+        if toStatement[i] != ' ':
+            flagT = False
+            break
+    for i in range(1, tSL):
+        if toStatement[i] != ' ':
+            flagT = False
+            break
+
+    if flagF == True and flagT == True:
         return True
     return False
 
@@ -81,13 +147,23 @@ def isMethod(fromStatement, toStatement):  # Deleted Statement and Added stateme
                 return True
     return False
 
-def isClass(fromStatement, toStatement): # To check Class modification
+
+def isClass(fromStatement, toStatement):  # To check Class modification
     if isClassAdded(fromStatement, toStatement) == True:
         return True
     return False
 
-def isLibrary(fromStatement, toStatement): # To check Library modification
+
+def isLibrary(fromStatement, toStatement):  # To check Library modification
     if isLibraryAdded(fromStatement, toStatement) == True:
+        return True
+    return False
+
+
+def isLoop(fromStatement, toStatement):  # To check looping modification
+    if isFor(fromStatement, toStatement) == True:
+        return True
+    elif isWhile(fromStatement, toStatement) == True:
         return True
     return False
 
@@ -102,32 +178,50 @@ def RepoMiner(gitName):
                 for rowNumber in range(totalRows):
                     if rowNumber < (totalRows - 1):
                         if len(lines[rowNumber]) > 0 and len(lines[rowNumber + 1]) > 0:
-                            if lines[rowNumber][0] == '-' and lines[rowNumber + 1][0] == '+':
-                                if isMethod(lines[rowNumber], lines[rowNumber + 1]):  # A deletion and after that an addition of methods with parameter addition
+                            if lines[rowNumber][0] == '-' and lines[rowNumber + 1][0] == '+' and notComment(
+                                    lines[rowNumber], lines[rowNumber + 1]):
+                                if isMethod(lines[rowNumber], lines[
+                                    rowNumber + 1]):  # A deletion and after that an addition of methods with parameter addition
                                     SourceCode = mod.source_code  # New Source code
-                                    SourceFile = mod.filename # File Changed
+                                    SourceFile = mod.filename  # File Changed
                                     Hash = commit.hash  # Commit SHA
                                     OldMethodSignature = str(lines[rowNumber])
                                     NewMethodSignature = str(lines[rowNumber + 1])
                                     upto = OldMethodSignature.find(')') + 1
-                                    OldMethodSignature = OldMethodSignature[1:upto]  # Extracting the old function Signature
+                                    OldMethodSignature = OldMethodSignature[
+                                                         1:upto]  # Extracting the old function Signature
                                     upto = NewMethodSignature.find(')') + 1
-                                    NewMethodSignature = NewMethodSignature[1:upto]  # Extracting the new function signature
-                                    WriteToCSV.append([Hash, SourceFile, OldMethodSignature, NewMethodSignature])  # Ready for report printing
-                                elif isClass( lines[rowNumber], lines[ rowNumber + 1]):  # A deletion and after that an addition of Class with parameter addition
+                                    NewMethodSignature = NewMethodSignature[
+                                                         1:upto]  # Extracting the new function signature
+                                    WriteToCSV.append([Hash, SourceFile, OldMethodSignature,
+                                                       NewMethodSignature])  # Ready for report printing
+                                elif isClass(lines[rowNumber], lines[
+                                    rowNumber + 1]):  # A deletion and after that an addition of Class with parameter addition
                                     SourceCode = mod.source_code  # New Source code
                                     SourceFile = mod.filename  # File Changed
                                     Hash = commit.hash  # Commit SHA
                                     OldClass = str(lines[rowNumber])
                                     NewClass = str(lines[rowNumber + 1])
-                                    WriteToCSV.append([Hash, SourceFile, OldClass, NewClass])  # Ready for report printing
-                                elif isLibrary( lines[rowNumber], lines[ rowNumber + 1]):  # A deletion and after that an addition of Library with parameter addition
+                                    WriteToCSV.append(
+                                        [Hash, SourceFile, OldClass[1:], NewClass[1:]])  # Ready for report printing
+                                elif isLibrary(lines[rowNumber], lines[
+                                    rowNumber + 1]):  # A deletion and after that an addition of Library with parameter addition
                                     SourceCode = mod.source_code  # New Source code
                                     SourceFile = mod.filename  # File Changed
                                     Hash = commit.hash  # Commit SHA
                                     OldLibrary = str(lines[rowNumber])
                                     NewLibrary = str(lines[rowNumber + 1])
-                                    WriteToCSV.append([Hash, SourceFile, OldLibrary, NewLibrary])  # Ready for report printing
+                                    WriteToCSV.append(
+                                        [Hash, SourceFile, OldLibrary[1:], NewLibrary[1:]])  # Ready for report printing
+                                elif isLoop(lines[rowNumber], lines[
+                                    rowNumber + 1]):  # A deletion and after that an addition of Library with parameter addition
+                                    SourceCode = mod.source_code  # New Source code
+                                    SourceFile = mod.filename  # File Changed
+                                    Hash = commit.hash  # Commit SHA
+                                    OldLoop = str(lines[rowNumber])
+                                    NewLoop = str(lines[rowNumber + 1])
+                                    WriteToCSV.append(
+                                        [Hash, SourceFile, OldLoop[1:], NewLoop[1:]])  # Ready for report printing
     return WriteToCSV
 
 

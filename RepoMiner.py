@@ -12,7 +12,7 @@ from pydriller import RepositoryMining
 
 
 def WriteReport(Result):
-    with open("Outputs/Result.csv", "w") as fileName:
+    with open("Outputs/RxJava.csv", "w") as fileName:
         writer = csv.writer(fileName)
         writer.writerow(["Commit SHA", "Java File", "Old function signature", "New function signature"])
         writer.writerows(Result)
@@ -170,6 +170,7 @@ def isLoop(fromStatement, toStatement):  # To check looping modification
 
 def RepoMiner(gitName):
     WriteToCSV = []
+    loopCounter = methodCounter = classCounter = libraryCounter= 0
     for commit in RepositoryMining(gitName).traverse_commits():  # For every commits
         for mod in commit.modifications:  # For every modifications
             if (mod.filename).find('.java') >= 0:  # Only for Java Files
@@ -195,6 +196,7 @@ def RepoMiner(gitName):
                                                          1:upto]  # Extracting the new function signature
                                     WriteToCSV.append([Hash, SourceFile, OldMethodSignature,
                                                        NewMethodSignature])  # Ready for report printing
+                                    methodCounter = methodCounter + 1
                                 elif isClass(lines[rowNumber], lines[
                                     rowNumber + 1]):  # A deletion and after that an addition of Class with parameter addition
                                     SourceCode = mod.source_code  # New Source code
@@ -204,6 +206,7 @@ def RepoMiner(gitName):
                                     NewClass = str(lines[rowNumber + 1])
                                     WriteToCSV.append(
                                         [Hash, SourceFile, OldClass[1:], NewClass[1:]])  # Ready for report printing
+                                    classCounter = classCounter + 1
                                 elif isLibrary(lines[rowNumber], lines[
                                     rowNumber + 1]):  # A deletion and after that an addition of Library with parameter addition
                                     SourceCode = mod.source_code  # New Source code
@@ -213,6 +216,7 @@ def RepoMiner(gitName):
                                     NewLibrary = str(lines[rowNumber + 1])
                                     WriteToCSV.append(
                                         [Hash, SourceFile, OldLibrary[1:], NewLibrary[1:]])  # Ready for report printing
+                                    libraryCounter = libraryCounter + 1
                                 elif isLoop(lines[rowNumber], lines[
                                     rowNumber + 1]):  # A deletion and after that an addition of Library with parameter addition
                                     SourceCode = mod.source_code  # New Source code
@@ -222,6 +226,8 @@ def RepoMiner(gitName):
                                     NewLoop = str(lines[rowNumber + 1])
                                     WriteToCSV.append(
                                         [Hash, SourceFile, OldLoop[1:], NewLoop[1:]])  # Ready for report printing
+                                    loopCounter = loopCounter + 1
+    WriteToCSV.append([methodCounter, classCounter, libraryCounter, loopCounter])
     return WriteToCSV
 
 

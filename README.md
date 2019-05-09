@@ -1,8 +1,16 @@
 
 # JavaRepoMiner
-**JavaRepoMiner** is a python tool which can detect the java method signature after and before a commit. In this repo, JavaRepoMiner mines a given Java GitHub code repository and analyses all the commits in that repository to find the commits that have added a parameter to an existing method. For example, assume that we have a method _test(int x)_ in a Java file. If a commit changes this method to be _test(int x, int y)_ then this commit added a parameter to this function and this project will detect that. 
 
-**JavaRepoMiner** makes a report in CSV file with columns  "Commit SHA, Java File, Old function signature, New function signature”. 
+**JavaRepoMiner** is a python tool which can detect:
+  - Java method signature after and before a commit. In this repo, JavaRepoMiner mines a given Java GitHub code repository and analyses all the commits in that repository to find the commits that have added a parameter to an existing method. For example, assume that we have a method _test(int x)_ in a Java file. If a commit changes this method to be _test(int x, int y)_ then this commit added a parameter to this function and this project will detect that.
+  - Java class before and after commit,
+  - Java Library before and after commit,
+  - Java Loops before and after commit.
+
+
+**JavaRepoMiner** makes a report in CSV file with:
+ - Columns of "Commit SHA, Java File, Before Commit Status, After Commit Status”. 
+ - Frequency of Method, Class, Library, and Loop.
 
 ## Getting Started
 
@@ -43,7 +51,7 @@ To run the code:
 ```
 $ git clone https://github.com/habibrahmanbd/JavaRepoMiner.git
 $ python RepoMiner.py
-Enter the git name with path: <RepoNameWIthDirectory>
+Enter the git name with path: <RepoNameWithDirectory>
 Output printed successfully...
 ```
 

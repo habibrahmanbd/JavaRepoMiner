@@ -1,0 +1,747 @@
+Commit SHA,Java File,Old function signature,New function signature
+128ffb7c7fd7ef1bdd6861c40348856ce053b4f1,CallbackResponseHandler.java,import retrofit.core.ClientMessage;,import retrofit.core.ErrorResponse;
+128ffb7c7fd7ef1bdd6861c40348856ce053b4f1,UiCallback.java,import retrofit.core.ClientMessage;,import retrofit.core.ErrorResponse;
+a1cee2eb489f4a3369ff24e94d39dabf939aa12e,CallbackResponseHandler.java,import retrofit.internal.gson.Gson;,
+a1cee2eb489f4a3369ff24e94d39dabf939aa12e,HttpRequestBuilder.java,import java.util.Iterator;,import java.util.HashSet;
+4f318d2d5b0fbc3c2a11f05be46427a495cfcf9d,CallbackResponseHandler.java,import retrofit.internal.gson.Gson;,
+4f318d2d5b0fbc3c2a11f05be46427a495cfcf9d,HttpRequestBuilder.java,import java.util.Iterator;,import java.util.HashSet;
+b40e91c8e998549d1f18df8843d7e9286947b92e,CallbackResponseHandler.java,import static retrofit.http.GsonProvider.gson;,import retrofit.internal.gson.Gson;
+9fcb0d28a8d18f212532f1101023deedd4bf89cc,CallbackResponseHandler.java,import static retrofit.http.GsonProvider.gson;,import retrofit.internal.gson.Gson;
+5ea679fb5223de4364d8b1bb7d46abba2e99ced4,Callback.java,  void clientError(T response),"  void clientError(T response, int statusCode)"
+5ea679fb5223de4364d8b1bb7d46abba2e99ced4,Callback.java,  void serverError(String message),"  void serverError(String message, int statusCode)"
+5ea679fb5223de4364d8b1bb7d46abba2e99ced4,HttpRequestBuilderTest.java,    @Override public void clientError(SimpleResponse response),"    @Override public void clientError(SimpleResponse response, int statusCode)"
+5ea679fb5223de4364d8b1bb7d46abba2e99ced4,HttpRequestBuilderTest.java,    @Override public void serverError(String message),"    @Override public void serverError(String message, int statusCode)"
+5ea679fb5223de4364d8b1bb7d46abba2e99ced4,RestAdapterTest.java,  private void expectResponseCalls(String jsonToReturn),"  private void expectResponseCalls(String jsonToReturn, int statusCode)"
+5ea679fb5223de4364d8b1bb7d46abba2e99ced4,UiCallback.java,  public void clientError(final T response),"  public void clientError(final T response, final int statusCode)"
+5ea679fb5223de4364d8b1bb7d46abba2e99ced4,UiCallback.java,  public void serverError(final String message),"  public void serverError(final String message, final int statusCode)"
+8fbbb78962d0de0bdbdb5f7b75cbf94641d667c0,Callback.java,  void clientError(T response),"  void clientError(T response, int statusCode)"
+8fbbb78962d0de0bdbdb5f7b75cbf94641d667c0,Callback.java,  void serverError(String message),"  void serverError(String message, int statusCode)"
+8fbbb78962d0de0bdbdb5f7b75cbf94641d667c0,HttpRequestBuilderTest.java,    @Override public void clientError(SimpleResponse response),"    @Override public void clientError(SimpleResponse response, int statusCode)"
+8fbbb78962d0de0bdbdb5f7b75cbf94641d667c0,HttpRequestBuilderTest.java,    @Override public void serverError(String message),"    @Override public void serverError(String message, int statusCode)"
+8fbbb78962d0de0bdbdb5f7b75cbf94641d667c0,RestAdapterTest.java,  private void expectResponseCalls(String jsonToReturn),"  private void expectResponseCalls(String jsonToReturn, int statusCode)"
+8fbbb78962d0de0bdbdb5f7b75cbf94641d667c0,UiCallback.java,  public void clientError(final T response),"  public void clientError(final T response, final int statusCode)"
+8fbbb78962d0de0bdbdb5f7b75cbf94641d667c0,UiCallback.java,  public void serverError(final String message),"  public void serverError(final String message, final int statusCode)"
+d8fab22ab289f24caf73e2af9d486b92afdad490,ShakeDetectorTest.java,public class ShakeDetectorTest extends TestCase {,import static org.junit.Assert.assertEquals;
+d8fab22ab289f24caf73e2af9d486b92afdad490,QueueFileTest.java,import junit.framework.TestCase;,
+d8fab22ab289f24caf73e2af9d486b92afdad490,ObjectsTest.java,import junit.framework.TestCase;,import static org.junit.Assert.assertEquals;
+d8fab22ab289f24caf73e2af9d486b92afdad490,TypedByteArrayTest.java,import junit.framework.TestCase;,import static org.junit.Assert.assertEquals;
+d8fab22ab289f24caf73e2af9d486b92afdad490,TypedFileTest.java,public class TypedFileTest extends TestCase {,import static org.junit.Assert.assertEquals;
+2e5d69bf08f0fa9df730d7861b68fd824c38a9ee,QueueFileTest.java,import junit.framework.TestCase;,
+2e5d69bf08f0fa9df730d7861b68fd824c38a9ee,ObjectsTest.java,import junit.framework.TestCase;,import static org.junit.Assert.assertEquals;
+2e5d69bf08f0fa9df730d7861b68fd824c38a9ee,TypedByteArrayTest.java,import junit.framework.TestCase;,import static org.junit.Assert.assertEquals;
+bc3bc515c0b63366a8746925555f3096f7d87540,HttpRequestBuilder.java,import com.google.inject.name.Named;,import javax.inject.Named;
+961e513fad0bceedfe68498577d0d629695dd773,HttpRequestBuilder.java,import com.google.inject.name.Named;,import javax.inject.Named;
+79dd9c7da0d7864aa65c5dc1e3f3231af6bbb2de,AndroidMainThread.java,import retrofit.core.MainThread;,import retrofit.http.MainThread;
+79dd9c7da0d7864aa65c5dc1e3f3231af6bbb2de,Fetcher.java,import static retrofit.core.internal.Objects.nonNull;,import static retrofit.io.internal.Objects.nonNull;
+79dd9c7da0d7864aa65c5dc1e3f3231af6bbb2de,AbstractTypedBytes.java,import retrofit.core.internal.Objects;,import retrofit.io.internal.Objects;
+79dd9c7da0d7864aa65c5dc1e3f3231af6bbb2de,TypedByteArray.java,import retrofit.core.internal.Objects;,import retrofit.io.internal.Objects;
+79dd9c7da0d7864aa65c5dc1e3f3231af6bbb2de,TypedFile.java,import retrofit.core.internal.Objects;,import retrofit.io.internal.Objects;
+312b0e029a58e45f6ce1635c7ac273b134db6be2,AndroidMainThread.java,import retrofit.core.MainThread;,import retrofit.http.MainThread;
+312b0e029a58e45f6ce1635c7ac273b134db6be2,Fetcher.java,import static retrofit.core.internal.Objects.nonNull;,import static retrofit.io.internal.Objects.nonNull;
+312b0e029a58e45f6ce1635c7ac273b134db6be2,AbstractTypedBytes.java,import retrofit.core.internal.Objects;,import retrofit.io.internal.Objects;
+312b0e029a58e45f6ce1635c7ac273b134db6be2,TypedByteArray.java,import retrofit.core.internal.Objects;,import retrofit.io.internal.Objects;
+312b0e029a58e45f6ce1635c7ac273b134db6be2,TypedFile.java,import retrofit.core.internal.Objects;,import retrofit.io.internal.Objects;
+3ad087526288ed6e0bd3d0ed32ddd71211a4cdfa,ShakeDetectorTest.java,import static org.junit.Assert.assertTrue;,import static org.fest.assertions.Assertions.assertThat;
+3ad087526288ed6e0bd3d0ed32ddd71211a4cdfa,HttpRequestBuilderTest.java,import org.apache.http.client.methods.HttpUriRequest;,
+3ad087526288ed6e0bd3d0ed32ddd71211a4cdfa,FilesTest.java,import static org.junit.Assert.fail;,import static org.fest.assertions.Assertions.assertThat;
+3ad087526288ed6e0bd3d0ed32ddd71211a4cdfa,QueueFileTest.java,import static org.junit.Assert.assertEquals;,import static org.fest.assertions.Assertions.assertThat;
+3ad087526288ed6e0bd3d0ed32ddd71211a4cdfa,TypedByteArrayTest.java,import static org.junit.Assert.assertFalse;,import org.junit.Test;
+3ad087526288ed6e0bd3d0ed32ddd71211a4cdfa,TypedFileTest.java,import static org.junit.Assert.assertFalse;,import static org.fest.assertions.Assertions.assertThat;
+3ad087526288ed6e0bd3d0ed32ddd71211a4cdfa,ObjectsTest.java,import static org.junit.Assert.fail;,import org.junit.Test;
+5b188b5d7f3293efd958a445f0499b0963b1a017,ShakeDetectorTest.java,import static org.junit.Assert.assertTrue;,import static org.fest.assertions.Assertions.assertThat;
+5b188b5d7f3293efd958a445f0499b0963b1a017,HttpRequestBuilderTest.java,import org.apache.http.client.methods.HttpUriRequest;,
+5b188b5d7f3293efd958a445f0499b0963b1a017,FilesTest.java,import static org.junit.Assert.fail;,import static org.fest.assertions.Assertions.assertThat;
+5b188b5d7f3293efd958a445f0499b0963b1a017,QueueFileTest.java,import static org.junit.Assert.assertEquals;,import static org.fest.assertions.Assertions.assertThat;
+5b188b5d7f3293efd958a445f0499b0963b1a017,TypedByteArrayTest.java,import static org.junit.Assert.assertFalse;,import org.junit.Test;
+5b188b5d7f3293efd958a445f0499b0963b1a017,TypedFileTest.java,import static org.junit.Assert.assertFalse;,import static org.fest.assertions.Assertions.assertThat;
+5b188b5d7f3293efd958a445f0499b0963b1a017,ObjectsTest.java,import static org.junit.Assert.fail;,import org.junit.Test;
+174d279a0e4339e8a4e08f80da013a203959e647,Fetcher.java,import static retrofit.io.internal.Objects.nonNull;,import static retrofit.internal.Objects.nonNull;
+174d279a0e4339e8a4e08f80da013a203959e647,AbstractTypedBytes.java,import retrofit.io.internal.Objects;,import retrofit.internal.Objects;
+174d279a0e4339e8a4e08f80da013a203959e647,TypedByteArray.java,import retrofit.io.internal.Objects;,import retrofit.internal.Objects;
+174d279a0e4339e8a4e08f80da013a203959e647,TypedFile.java,import retrofit.io.internal.Objects;,import retrofit.internal.Objects;
+174d279a0e4339e8a4e08f80da013a203959e647,QueueFileTest.java,import static org.junit.Assert.fail;,import static org.fest.assertions.Fail.fail;
+174d279a0e4339e8a4e08f80da013a203959e647,Main.java,import retrofit.io.Files;,import retrofit.io.Dirs;
+02157d59c61320e2ca7488d926195b6b98136df4,Fetcher.java,import static retrofit.io.internal.Objects.nonNull;,import static retrofit.internal.Objects.nonNull;
+02157d59c61320e2ca7488d926195b6b98136df4,AbstractTypedBytes.java,import retrofit.io.internal.Objects;,import retrofit.internal.Objects;
+02157d59c61320e2ca7488d926195b6b98136df4,TypedByteArray.java,import retrofit.io.internal.Objects;,import retrofit.internal.Objects;
+02157d59c61320e2ca7488d926195b6b98136df4,TypedFile.java,import retrofit.io.internal.Objects;,import retrofit.internal.Objects;
+02157d59c61320e2ca7488d926195b6b98136df4,QueueFileTest.java,import static org.junit.Assert.fail;,import static org.fest.assertions.Fail.fail;
+02157d59c61320e2ca7488d926195b6b98136df4,Main.java,import retrofit.io.Files;,import retrofit.io.Dirs;
+eea6cc6fd33f50607302593bc20f12db642f489e,Fetcher.java,import static retrofit.internal.Objects.nonNull;,import static retrofit.http.RestAdapter.DATE_FORMAT;
+eea6cc6fd33f50607302593bc20f12db642f489e,HttpClients.java,import java.text.SimpleDateFormat;,import java.text.DateFormat;
+25f7e1c70b24e4ca72c4f652f5c7d567b42cf427,Fetcher.java,import static retrofit.internal.Objects.nonNull;,import static retrofit.http.RestAdapter.DATE_FORMAT;
+25f7e1c70b24e4ca72c4f652f5c7d567b42cf427,HttpClients.java,import java.text.SimpleDateFormat;,import java.text.DateFormat;
+e997c7218efa52faf9b91022a8f9ad46091aa05c,Fetcher.java,            while ((read = in.read(buffer)) > -1) {,            while ((read = in.read(buffer)) != -1) {
+b080ccb88fd4e0f268e9cfa3e81758db53c85325,HttpRequestBuilderTest.java,import static org.fest.assertions.Fail.fail;,import static org.fest.assertions.api.Assertions.assertThat;
+b080ccb88fd4e0f268e9cfa3e81758db53c85325,RestAdapterTest.java,import static org.fest.assertions.Assertions.assertThat;,import static org.fest.assertions.api.Assertions.assertThat;
+b080ccb88fd4e0f268e9cfa3e81758db53c85325,ObjectsTest.java,import static org.fest.assertions.Fail.fail;,import static org.fest.assertions.api.Assertions.assertThat;
+b080ccb88fd4e0f268e9cfa3e81758db53c85325,FilesTest.java,import static org.fest.assertions.Fail.fail;,import static org.fest.assertions.api.Assertions.assertThat;
+b080ccb88fd4e0f268e9cfa3e81758db53c85325,TypedByteArrayTest.java,import static org.fest.assertions.Assertions.assertThat;,import static org.fest.assertions.api.Assertions.assertThat;
+b080ccb88fd4e0f268e9cfa3e81758db53c85325,TypedFileTest.java,import static org.fest.assertions.Assertions.assertThat;,import static org.fest.assertions.api.Assertions.assertThat;
+08ffcef4e7fa989cdcd9faaa6de91d84d5ed05f3,HttpRequestBuilderTest.java,import static org.fest.assertions.Fail.fail;,import static org.fest.assertions.api.Assertions.assertThat;
+08ffcef4e7fa989cdcd9faaa6de91d84d5ed05f3,RestAdapterTest.java,import static org.fest.assertions.Assertions.assertThat;,import static org.fest.assertions.api.Assertions.assertThat;
+08ffcef4e7fa989cdcd9faaa6de91d84d5ed05f3,ObjectsTest.java,import static org.fest.assertions.Fail.fail;,import static org.fest.assertions.api.Assertions.assertThat;
+08ffcef4e7fa989cdcd9faaa6de91d84d5ed05f3,FilesTest.java,import static org.fest.assertions.Fail.fail;,import static org.fest.assertions.api.Assertions.assertThat;
+08ffcef4e7fa989cdcd9faaa6de91d84d5ed05f3,TypedByteArrayTest.java,import static org.fest.assertions.Assertions.assertThat;,import static org.fest.assertions.api.Assertions.assertThat;
+08ffcef4e7fa989cdcd9faaa6de91d84d5ed05f3,TypedFileTest.java,import static org.fest.assertions.Assertions.assertThat;,import static org.fest.assertions.api.Assertions.assertThat;
+3f1c5ab43ac339b81c0b9549e2043490d65bdd3e,RestAdapterTest.java,import org.apache.http.ProtocolVersion;,import org.apache.http.HttpVersion;
+1aefb9247c240483f09142d0cd7e4da109bd144d,RestAdapterTest.java,import org.apache.http.ProtocolVersion;,import org.apache.http.HttpVersion;
+e7dfcc5f0000416db677b0234fd6b35a12b82229,HttpRequestBuilder.java,import java.util.HashSet;,import java.util.LinkedHashSet;
+e7dfcc5f0000416db677b0234fd6b35a12b82229,HttpRequestBuilder.java,import java.util.regex.Pattern;,import javax.inject.Named;
+e7dfcc5f0000416db677b0234fd6b35a12b82229,Platform.java,import static retrofit.http.RestAdapter.SynchronousExecutor;,import static retrofit.http.Utils.SynchronousExecutor;
+e7dfcc5f0000416db677b0234fd6b35a12b82229,RestAdapter.java,import java.util.HashMap;,import java.util.LinkedHashMap;
+b65ba6704f22aa740d3574022e2f4302828213fc,HttpRequestBuilder.java,import java.util.HashSet;,import java.util.LinkedHashSet;
+b65ba6704f22aa740d3574022e2f4302828213fc,HttpRequestBuilder.java,import java.util.regex.Pattern;,import javax.inject.Named;
+b65ba6704f22aa740d3574022e2f4302828213fc,Platform.java,import static retrofit.http.RestAdapter.SynchronousExecutor;,import static retrofit.http.Utils.SynchronousExecutor;
+b65ba6704f22aa740d3574022e2f4302828213fc,RestAdapter.java,import java.util.HashMap;,import java.util.LinkedHashMap;
+4d5081891e0d9f3968251842acdef41a45cc2330,Platform.java,import org.apache.http.impl.client.DefaultHttpClient;,import retrofit.android.AndroidApacheClient;
+4d5081891e0d9f3968251842acdef41a45cc2330,RestAdapter.java,import java.lang.reflect.WildcardType;,import java.util.Collections;
+4d5081891e0d9f3968251842acdef41a45cc2330,RestAdapter.java,import java.util.LinkedHashSet;,import java.util.List;
+4d5081891e0d9f3968251842acdef41a45cc2330,RestAdapter.java,import retrofit.http.HttpProfiler.RequestInformation;,import retrofit.http.Profiler.RequestInformation;
+4d5081891e0d9f3968251842acdef41a45cc2330,RestAdapterTest.java,import java.lang.reflect.Type;,import java.util.Collections;
+4d5081891e0d9f3968251842acdef41a45cc2330,RestAdapterTest.java,import static retrofit.http.RestAdapter.MethodDetails;,import static org.mockito.Matchers.any;
+4d5081891e0d9f3968251842acdef41a45cc2330,Client.java,import org.apache.http.impl.client.DefaultHttpClient;,import java.util.List;
+3b7fa254ad8db00a1a2a59d06e18921a0cc9be6c,Platform.java,import org.apache.http.impl.client.DefaultHttpClient;,import retrofit.android.AndroidApacheClient;
+3b7fa254ad8db00a1a2a59d06e18921a0cc9be6c,RestAdapter.java,import java.lang.reflect.WildcardType;,import java.util.Collections;
+3b7fa254ad8db00a1a2a59d06e18921a0cc9be6c,RestAdapter.java,import java.util.LinkedHashSet;,import java.util.List;
+3b7fa254ad8db00a1a2a59d06e18921a0cc9be6c,RestAdapter.java,import retrofit.http.HttpProfiler.RequestInformation;,import retrofit.http.Profiler.RequestInformation;
+3b7fa254ad8db00a1a2a59d06e18921a0cc9be6c,RestAdapterTest.java,import java.lang.reflect.Type;,import java.util.Collections;
+3b7fa254ad8db00a1a2a59d06e18921a0cc9be6c,RestAdapterTest.java,import static retrofit.http.RestAdapter.MethodDetails;,import static org.mockito.Matchers.any;
+3b7fa254ad8db00a1a2a59d06e18921a0cc9be6c,Client.java,import org.apache.http.impl.client.DefaultHttpClient;,import java.util.List;
+67c2ce13dfa2e3a32493b041b7dc93f1fe2e4be3,RetrofitError.java,import java.util.List;,import retrofit.http.client.Response;
+f78b80b55ae748a91b94358bde232c1d314f8bb5,RetrofitError.java,import java.util.List;,import retrofit.http.client.Response;
+fe43ab0b5c3541fb33b8fddc6a1db60260ff52b3,Converter.java,import retrofit.io.TypedBytes;,import retrofit.io.TypedInput;
+fe43ab0b5c3541fb33b8fddc6a1db60260ff52b3,GsonConverter.java,import retrofit.io.TypedBytes;,import retrofit.io.TypedInput;
+fe43ab0b5c3541fb33b8fddc6a1db60260ff52b3,RequestBuilder.java,import retrofit.io.TypedBytes;,import retrofit.io.TypedOutput;
+fe43ab0b5c3541fb33b8fddc6a1db60260ff52b3,RestAdapter.java,import retrofit.io.TypedBytes;,import retrofit.io.TypedByteArray;
+fe43ab0b5c3541fb33b8fddc6a1db60260ff52b3,RestMethodInfo.java,import retrofit.io.TypedBytes;,import retrofit.io.TypedOutput;
+fe43ab0b5c3541fb33b8fddc6a1db60260ff52b3,ApacheClient.java,import retrofit.io.TypedBytes;,import retrofit.io.TypedByteArray;
+fe43ab0b5c3541fb33b8fddc6a1db60260ff52b3,Request.java,import retrofit.io.TypedBytes;,import retrofit.io.TypedOutput;
+fe43ab0b5c3541fb33b8fddc6a1db60260ff52b3,RequestBuilderTest.java,import retrofit.io.TypedBytes;,import retrofit.io.TypedString;
+fe43ab0b5c3541fb33b8fddc6a1db60260ff52b3,RestMethodInfoTest.java,import retrofit.io.TypedBytes;,import retrofit.io.TypedOutput;
+fe43ab0b5c3541fb33b8fddc6a1db60260ff52b3,ApacheClientTest.java,import retrofit.io.TypedBytes;,import retrofit.io.TypedOutput;
+938866947b9bae500996f618d9f5cec371b979c5,Converter.java,import retrofit.io.TypedBytes;,import retrofit.io.TypedInput;
+938866947b9bae500996f618d9f5cec371b979c5,GsonConverter.java,import retrofit.io.TypedBytes;,import retrofit.io.TypedInput;
+938866947b9bae500996f618d9f5cec371b979c5,RequestBuilder.java,import retrofit.io.TypedBytes;,import retrofit.io.TypedOutput;
+938866947b9bae500996f618d9f5cec371b979c5,RestAdapter.java,import retrofit.io.TypedBytes;,import retrofit.io.TypedByteArray;
+938866947b9bae500996f618d9f5cec371b979c5,RestMethodInfo.java,import retrofit.io.TypedBytes;,import retrofit.io.TypedOutput;
+938866947b9bae500996f618d9f5cec371b979c5,ApacheClient.java,import retrofit.io.TypedBytes;,import retrofit.io.TypedByteArray;
+938866947b9bae500996f618d9f5cec371b979c5,Request.java,import retrofit.io.TypedBytes;,import retrofit.io.TypedOutput;
+938866947b9bae500996f618d9f5cec371b979c5,RequestBuilderTest.java,import retrofit.io.TypedBytes;,import retrofit.io.TypedString;
+938866947b9bae500996f618d9f5cec371b979c5,RestMethodInfoTest.java,import retrofit.io.TypedBytes;,import retrofit.io.TypedOutput;
+938866947b9bae500996f618d9f5cec371b979c5,ApacheClientTest.java,import retrofit.io.TypedBytes;,import retrofit.io.TypedOutput;
+81a1b3bed4b7d9593cea83145695ccaec15a4588,Converter.java,import retrofit.io.TypedOutput;,import retrofit.http.mime.TypedInput;
+81a1b3bed4b7d9593cea83145695ccaec15a4588,GsonConverter.java,import retrofit.io.TypedOutput;,import retrofit.http.mime.TypedInput;
+81a1b3bed4b7d9593cea83145695ccaec15a4588,Platform.java,import retrofit.android.MainThreadExecutor;,import retrofit.http.android.AndroidApacheClient;
+81a1b3bed4b7d9593cea83145695ccaec15a4588,RequestBuilder.java,import retrofit.io.TypedString;,import retrofit.http.mime.TypedOutput;
+81a1b3bed4b7d9593cea83145695ccaec15a4588,RestAdapter.java,import retrofit.io.TypedOutput;,import retrofit.http.mime.TypedByteArray;
+81a1b3bed4b7d9593cea83145695ccaec15a4588,RestMethodInfo.java,import retrofit.io.TypedOutput;,import retrofit.http.mime.TypedOutput;
+81a1b3bed4b7d9593cea83145695ccaec15a4588,RetrofitError.java,import retrofit.io.TypedInput;,import retrofit.http.mime.TypedInput;
+81a1b3bed4b7d9593cea83145695ccaec15a4588,ApacheClient.java,import retrofit.io.TypedOutput;,import retrofit.http.mime.TypedByteArray;
+81a1b3bed4b7d9593cea83145695ccaec15a4588,Request.java,import retrofit.io.TypedOutput;,import retrofit.http.mime.TypedOutput;
+81a1b3bed4b7d9593cea83145695ccaec15a4588,Response.java,import retrofit.io.TypedInput;,import retrofit.http.mime.TypedInput;
+81a1b3bed4b7d9593cea83145695ccaec15a4588,TypedInputStream.java,import retrofit.io.TypedInput;,import retrofit.http.mime.TypedInput;
+81a1b3bed4b7d9593cea83145695ccaec15a4588,RequestBuilderTest.java,import retrofit.io.TypedOutput;,import retrofit.http.mime.TypedString;
+81a1b3bed4b7d9593cea83145695ccaec15a4588,RestAdapterTest.java,import retrofit.io.TypedString;,import retrofit.http.mime.TypedString;
+81a1b3bed4b7d9593cea83145695ccaec15a4588,RestMethodInfoTest.java,import retrofit.io.TypedOutput;,import retrofit.http.mime.TypedOutput;
+81a1b3bed4b7d9593cea83145695ccaec15a4588,ApacheClientTest.java,import retrofit.io.TypedString;,import retrofit.http.mime.TypedOutput;
+49c9c0281fcc08b9b9b1023e48f73c6c1809bd19,Converter.java,import retrofit.io.TypedOutput;,import retrofit.http.mime.TypedInput;
+49c9c0281fcc08b9b9b1023e48f73c6c1809bd19,GsonConverter.java,import retrofit.io.TypedOutput;,import retrofit.http.mime.TypedInput;
+49c9c0281fcc08b9b9b1023e48f73c6c1809bd19,Platform.java,import retrofit.android.MainThreadExecutor;,import retrofit.http.android.AndroidApacheClient;
+49c9c0281fcc08b9b9b1023e48f73c6c1809bd19,RequestBuilder.java,import retrofit.io.TypedString;,import retrofit.http.mime.TypedOutput;
+49c9c0281fcc08b9b9b1023e48f73c6c1809bd19,RestAdapter.java,import retrofit.io.TypedOutput;,import retrofit.http.mime.TypedByteArray;
+49c9c0281fcc08b9b9b1023e48f73c6c1809bd19,RestMethodInfo.java,import retrofit.io.TypedOutput;,import retrofit.http.mime.TypedOutput;
+49c9c0281fcc08b9b9b1023e48f73c6c1809bd19,RetrofitError.java,import retrofit.io.TypedInput;,import retrofit.http.mime.TypedInput;
+49c9c0281fcc08b9b9b1023e48f73c6c1809bd19,ApacheClient.java,import retrofit.io.TypedOutput;,import retrofit.http.mime.TypedByteArray;
+49c9c0281fcc08b9b9b1023e48f73c6c1809bd19,Request.java,import retrofit.io.TypedOutput;,import retrofit.http.mime.TypedOutput;
+49c9c0281fcc08b9b9b1023e48f73c6c1809bd19,Response.java,import retrofit.io.TypedInput;,import retrofit.http.mime.TypedInput;
+49c9c0281fcc08b9b9b1023e48f73c6c1809bd19,TypedInputStream.java,import retrofit.io.TypedInput;,import retrofit.http.mime.TypedInput;
+49c9c0281fcc08b9b9b1023e48f73c6c1809bd19,RequestBuilderTest.java,import retrofit.io.TypedOutput;,import retrofit.http.mime.TypedString;
+49c9c0281fcc08b9b9b1023e48f73c6c1809bd19,RestAdapterTest.java,import retrofit.io.TypedString;,import retrofit.http.mime.TypedString;
+49c9c0281fcc08b9b9b1023e48f73c6c1809bd19,RestMethodInfoTest.java,import retrofit.io.TypedOutput;,import retrofit.http.mime.TypedOutput;
+49c9c0281fcc08b9b9b1023e48f73c6c1809bd19,ApacheClientTest.java,import retrofit.io.TypedString;,import retrofit.http.mime.TypedOutput;
+a10def06d7a3ec75de30fee9c2dfd47837201eba,Callback.java,  void success(T t),"  void success(Response response, T t)"
+168279ff298faacc2f60d08d48bb622d2982da35,Callback.java,  void success(T t),"  void success(T t, Response response)"
+737b844b8b1e9e9ff25e1b4dde266435ff1a9821,MultipartTypedOutput.java,import org.apache.http.entity.mime.content.AbstractContentBody;,import java.util.LinkedHashMap;
+f43e55bf68dff6c71de840652090e666434cc95d,MultipartTypedOutput.java,import org.apache.http.entity.mime.content.AbstractContentBody;,import java.util.LinkedHashMap;
+0dbe181428da146c340a312c68aabfb2e4611c08,MultipartTypedOutput.java,import java.util.Map;,import java.util.ArrayList;
+1af9c9595077a7cfc0c30c3669208cc5bd047407,MultipartTypedOutput.java,import java.util.Map;,import java.util.ArrayList;
+6248abcb99cf059a17bf4d2298faa4658101fe1f,Platform.java,import static retrofit.http.RestAdapter.THREAD_PREFIX;,import static retrofit.http.RestAdapter.IDLE_THREAD_NAME;
+360eedbe369df48285b5dbd8162f81181ced82c3,Platform.java,import static retrofit.http.RestAdapter.THREAD_PREFIX;,import static retrofit.http.RestAdapter.IDLE_THREAD_NAME;
+f844530c11dca51bd8d96afc87b6e94d0a20917a,ApacheClient.java,import retrofit.http.Header;,import retrofit.http.HeaderPair;
+f844530c11dca51bd8d96afc87b6e94d0a20917a,Request.java,import retrofit.http.Header;,import retrofit.http.HeaderPair;
+f844530c11dca51bd8d96afc87b6e94d0a20917a,Response.java,import retrofit.http.Header;,import retrofit.http.HeaderPair;
+f844530c11dca51bd8d96afc87b6e94d0a20917a,UrlConnectionClient.java,import retrofit.http.Header;,import retrofit.http.HeaderPair;
+f844530c11dca51bd8d96afc87b6e94d0a20917a,ApacheClientTest.java,import retrofit.http.Header;,import retrofit.http.HeaderPair;
+f844530c11dca51bd8d96afc87b6e94d0a20917a,UrlConnectionClientTest.java,import retrofit.http.Header;,import retrofit.http.HeaderPair;
+2ef7ca064584f60416581b0793557eb4277136a1,RequestBuilder.java,import java.util.Set;,import retrofit.http.client.Header;
+2ef7ca064584f60416581b0793557eb4277136a1,RequestBuilderTest.java,import static retrofit.http.RestMethodInfo.NO_SINGLE_ENTITY;,import static retrofit.http.RestMethodInfo.NO_BODY;
+2ef7ca064584f60416581b0793557eb4277136a1,RestMethodInfoTest.java,import static retrofit.http.RestMethodInfo.NO_SINGLE_ENTITY;,import static retrofit.http.RestMethodInfo.NO_BODY;
+2ef7ca064584f60416581b0793557eb4277136a1,Client.java,import retrofit.http.Name;,import retrofit.http.Path;
+78e190d989aa9642df890588b69d12e7c11a3f20,RequestBuilder.java,import retrofit.http.mime.FormEncodedTypedOutput;,import retrofit.http.mime.FormUrlEncodedTypedOutput;
+4d802a40b5e588cffe353a10cf88ad83353b5418,Header.java,  },import java.lang.annotation.Retention;
+4d802a40b5e588cffe353a10cf88ad83353b5418,Headers.java,import java.util.List;,import java.lang.annotation.Retention;
+4d802a40b5e588cffe353a10cf88ad83353b5418,Headers.java,  List<Header> get();,import static java.lang.annotation.ElementType.METHOD;
+4d802a40b5e588cffe353a10cf88ad83353b5418,RequestBuilder.java,import java.util.Set;,import retrofit.http.client.Header;
+4d802a40b5e588cffe353a10cf88ad83353b5418,RequestBuilderTest.java,import static retrofit.http.RestMethodInfo.NO_SINGLE_ENTITY;,import static retrofit.http.RestMethodInfo.NO_BODY;
+4d802a40b5e588cffe353a10cf88ad83353b5418,RestMethodInfoTest.java,import static retrofit.http.RestMethodInfo.NO_SINGLE_ENTITY;,import static retrofit.http.RestMethodInfo.NO_BODY;
+4d802a40b5e588cffe353a10cf88ad83353b5418,Client.java,import retrofit.http.Name;,import retrofit.http.Path;
+ef71254e5f8c3db0aae289a15d47e0a3c457f26f,Callback.java,import retrofit.http.client.Response;,import retrofit.client.Response;
+ef71254e5f8c3db0aae289a15d47e0a3c457f26f,Platform.java,import retrofit.http.client.UrlConnectionClient;,import retrofit.android.AndroidApacheClient;
+ef71254e5f8c3db0aae289a15d47e0a3c457f26f,RequestBuilder.java,import static retrofit.http.RestMethodInfo.NO_BODY;,import retrofit.client.Header;
+ef71254e5f8c3db0aae289a15d47e0a3c457f26f,RequestHeaders.java,import retrofit.http.client.Header;,import retrofit.client.Header;
+ef71254e5f8c3db0aae289a15d47e0a3c457f26f,ResponseWrapper.java,import retrofit.http.client.Response;,import retrofit.client.Response;
+ef71254e5f8c3db0aae289a15d47e0a3c457f26f,RestAdapter.java,import static retrofit.http.Utils.SynchronousExecutor;,import retrofit.Profiler.RequestInformation;
+ef71254e5f8c3db0aae289a15d47e0a3c457f26f,RetrofitError.java,import retrofit.http.mime.TypedInput;,import retrofit.client.Response;
+ef71254e5f8c3db0aae289a15d47e0a3c457f26f,Utils.java,import retrofit.http.mime.TypedInput;,import retrofit.client.Response;
+ef71254e5f8c3db0aae289a15d47e0a3c457f26f,AndroidApacheClient.java,import retrofit.http.client.ApacheClient;,import retrofit.client.ApacheClient;
+ef71254e5f8c3db0aae289a15d47e0a3c457f26f,ApacheClient.java,import retrofit.http.mime.TypedOutput;,import retrofit.mime.TypedByteArray;
+ef71254e5f8c3db0aae289a15d47e0a3c457f26f,Request.java,import retrofit.http.mime.TypedOutput;,import retrofit.mime.TypedOutput;
+ef71254e5f8c3db0aae289a15d47e0a3c457f26f,Response.java,import retrofit.http.mime.TypedInput;,import retrofit.mime.TypedInput;
+ef71254e5f8c3db0aae289a15d47e0a3c457f26f,UrlConnectionClient.java,import retrofit.http.mime.TypedOutput;,import retrofit.mime.TypedInput;
+ef71254e5f8c3db0aae289a15d47e0a3c457f26f,Converter.java,import retrofit.http.mime.TypedOutput;,import retrofit.mime.TypedInput;
+ef71254e5f8c3db0aae289a15d47e0a3c457f26f,GsonConverter.java,import retrofit.http.mime.TypedOutput;,import retrofit.mime.MimeUtil;
+ef71254e5f8c3db0aae289a15d47e0a3c457f26f,CallbackRunnableTest.java,import static retrofit.http.Utils.SynchronousExecutor;,import static retrofit.Utils.SynchronousExecutor;
+ef71254e5f8c3db0aae289a15d47e0a3c457f26f,RequestBuilderTest.java,import retrofit.http.mime.TypedString;,import retrofit.converter.Converter;
+ef71254e5f8c3db0aae289a15d47e0a3c457f26f,RequestBuilderTest.java,import static retrofit.http.RestMethodInfo.RequestType;,import static retrofit.RestMethodInfo.NO_BODY;
+ef71254e5f8c3db0aae289a15d47e0a3c457f26f,RestAdapterTest.java,import retrofit.http.mime.TypedString;,import retrofit.converter.ConversionException;
+ef71254e5f8c3db0aae289a15d47e0a3c457f26f,RestAdapterTest.java,import static retrofit.http.Utils.SynchronousExecutor;,import static retrofit.Profiler.RequestInformation;
+ef71254e5f8c3db0aae289a15d47e0a3c457f26f,RestMethodInfoTest.java,import retrofit.http.mime.TypedOutput;,import retrofit.http.Body;
+ef71254e5f8c3db0aae289a15d47e0a3c457f26f,RestMethodInfoTest.java,import static retrofit.http.RestMethodInfo.RequestType.SIMPLE;,import static retrofit.RestMethodInfo.NO_BODY;
+ef71254e5f8c3db0aae289a15d47e0a3c457f26f,TestingUtils.java,import retrofit.http.mime.TypedOutput;,import retrofit.mime.MultipartTypedOutput;
+ef71254e5f8c3db0aae289a15d47e0a3c457f26f,ApacheClientTest.java,import retrofit.http.mime.TypedString;,import retrofit.TestingUtils;
+ef71254e5f8c3db0aae289a15d47e0a3c457f26f,ApacheClientTest.java,import static retrofit.http.client.ApacheClient.TypedOutputEntity;,import static retrofit.TestingUtils.assertBytes;
+ef71254e5f8c3db0aae289a15d47e0a3c457f26f,UrlConnectionClientTest.java,import retrofit.http.mime.TypedString;,import retrofit.TestingUtils;
+ef71254e5f8c3db0aae289a15d47e0a3c457f26f,UrlConnectionClientTest.java,import static retrofit.http.TestingUtils.assertBytes;,import static retrofit.TestingUtils.assertBytes;
+ef71254e5f8c3db0aae289a15d47e0a3c457f26f,MimeUtilTest.java,import static retrofit.http.Utils.parseCharset;,import static retrofit.mime.MimeUtil.parseCharset;
+ef71254e5f8c3db0aae289a15d47e0a3c457f26f,GitHubClient.java,import retrofit.http.RestAdapter;,import retrofit.RestAdapter;
+bf94f532f574c69871dc0e139e2b03b3e3f410fc,Callback.java,import retrofit.http.client.Response;,import retrofit.client.Response;
+bf94f532f574c69871dc0e139e2b03b3e3f410fc,Platform.java,import retrofit.http.client.UrlConnectionClient;,import retrofit.android.AndroidApacheClient;
+bf94f532f574c69871dc0e139e2b03b3e3f410fc,RequestBuilder.java,import static retrofit.http.RestMethodInfo.NO_BODY;,import retrofit.client.Header;
+bf94f532f574c69871dc0e139e2b03b3e3f410fc,RequestHeaders.java,import retrofit.http.client.Header;,import retrofit.client.Header;
+bf94f532f574c69871dc0e139e2b03b3e3f410fc,ResponseWrapper.java,import retrofit.http.client.Response;,import retrofit.client.Response;
+bf94f532f574c69871dc0e139e2b03b3e3f410fc,RestAdapter.java,import static retrofit.http.Utils.SynchronousExecutor;,import retrofit.Profiler.RequestInformation;
+bf94f532f574c69871dc0e139e2b03b3e3f410fc,RetrofitError.java,import retrofit.http.mime.TypedInput;,import retrofit.client.Response;
+bf94f532f574c69871dc0e139e2b03b3e3f410fc,Utils.java,import retrofit.http.mime.TypedInput;,import retrofit.client.Response;
+bf94f532f574c69871dc0e139e2b03b3e3f410fc,AndroidApacheClient.java,import retrofit.http.client.ApacheClient;,import retrofit.client.ApacheClient;
+bf94f532f574c69871dc0e139e2b03b3e3f410fc,ApacheClient.java,import retrofit.http.mime.TypedOutput;,import retrofit.mime.TypedByteArray;
+bf94f532f574c69871dc0e139e2b03b3e3f410fc,Request.java,import retrofit.http.mime.TypedOutput;,import retrofit.mime.TypedOutput;
+bf94f532f574c69871dc0e139e2b03b3e3f410fc,Response.java,import retrofit.http.mime.TypedInput;,import retrofit.mime.TypedInput;
+bf94f532f574c69871dc0e139e2b03b3e3f410fc,UrlConnectionClient.java,import retrofit.http.mime.TypedOutput;,import retrofit.mime.TypedInput;
+bf94f532f574c69871dc0e139e2b03b3e3f410fc,Converter.java,import retrofit.http.mime.TypedOutput;,import retrofit.mime.TypedInput;
+bf94f532f574c69871dc0e139e2b03b3e3f410fc,GsonConverter.java,import retrofit.http.mime.TypedOutput;,import retrofit.mime.MimeUtil;
+bf94f532f574c69871dc0e139e2b03b3e3f410fc,CallbackRunnableTest.java,import static retrofit.http.Utils.SynchronousExecutor;,import static retrofit.Utils.SynchronousExecutor;
+bf94f532f574c69871dc0e139e2b03b3e3f410fc,RequestBuilderTest.java,import retrofit.http.mime.TypedString;,import retrofit.converter.Converter;
+bf94f532f574c69871dc0e139e2b03b3e3f410fc,RequestBuilderTest.java,import static retrofit.http.RestMethodInfo.RequestType;,import static retrofit.RestMethodInfo.NO_BODY;
+bf94f532f574c69871dc0e139e2b03b3e3f410fc,RestAdapterTest.java,import retrofit.http.mime.TypedString;,import retrofit.converter.ConversionException;
+bf94f532f574c69871dc0e139e2b03b3e3f410fc,RestAdapterTest.java,import static retrofit.http.Utils.SynchronousExecutor;,import static retrofit.Profiler.RequestInformation;
+bf94f532f574c69871dc0e139e2b03b3e3f410fc,RestMethodInfoTest.java,import retrofit.http.mime.TypedOutput;,import retrofit.http.Body;
+bf94f532f574c69871dc0e139e2b03b3e3f410fc,RestMethodInfoTest.java,import static retrofit.http.RestMethodInfo.RequestType.SIMPLE;,import static retrofit.RestMethodInfo.NO_BODY;
+bf94f532f574c69871dc0e139e2b03b3e3f410fc,TestingUtils.java,import retrofit.http.mime.TypedOutput;,import retrofit.mime.MultipartTypedOutput;
+bf94f532f574c69871dc0e139e2b03b3e3f410fc,ApacheClientTest.java,import retrofit.http.mime.TypedString;,import retrofit.TestingUtils;
+bf94f532f574c69871dc0e139e2b03b3e3f410fc,ApacheClientTest.java,import static retrofit.http.client.ApacheClient.TypedOutputEntity;,import static retrofit.TestingUtils.assertBytes;
+bf94f532f574c69871dc0e139e2b03b3e3f410fc,UrlConnectionClientTest.java,import retrofit.http.mime.TypedString;,import retrofit.TestingUtils;
+bf94f532f574c69871dc0e139e2b03b3e3f410fc,UrlConnectionClientTest.java,import static retrofit.http.TestingUtils.assertBytes;,import static retrofit.TestingUtils.assertBytes;
+bf94f532f574c69871dc0e139e2b03b3e3f410fc,MimeUtilTest.java,import static retrofit.http.Utils.parseCharset;,import static retrofit.mime.MimeUtil.parseCharset;
+bf94f532f574c69871dc0e139e2b03b3e3f410fc,GitHubClient.java,import retrofit.http.RestAdapter;,import retrofit.RestAdapter;
+18cb07d47f5c4b7fc7c814b0fa5b34abb1ae7f7d,Callback.java,import retrofit.http.client.Response;,import retrofit.client.Response;
+18cb07d47f5c4b7fc7c814b0fa5b34abb1ae7f7d,Platform.java,import retrofit.http.client.UrlConnectionClient;,import retrofit.android.AndroidApacheClient;
+18cb07d47f5c4b7fc7c814b0fa5b34abb1ae7f7d,RequestBuilder.java,import static retrofit.http.RestMethodInfo.NO_BODY;,import retrofit.client.Header;
+18cb07d47f5c4b7fc7c814b0fa5b34abb1ae7f7d,RequestHeaders.java,import retrofit.http.client.Header;,import retrofit.client.Header;
+18cb07d47f5c4b7fc7c814b0fa5b34abb1ae7f7d,ResponseWrapper.java,import retrofit.http.client.Response;,import retrofit.client.Response;
+18cb07d47f5c4b7fc7c814b0fa5b34abb1ae7f7d,RestAdapter.java,import static retrofit.http.Utils.SynchronousExecutor;,import retrofit.Profiler.RequestInformation;
+18cb07d47f5c4b7fc7c814b0fa5b34abb1ae7f7d,RetrofitError.java,import retrofit.http.mime.TypedInput;,import retrofit.client.Response;
+18cb07d47f5c4b7fc7c814b0fa5b34abb1ae7f7d,Utils.java,import retrofit.http.mime.TypedInput;,import retrofit.client.Response;
+18cb07d47f5c4b7fc7c814b0fa5b34abb1ae7f7d,AndroidApacheClient.java,import retrofit.http.client.ApacheClient;,import retrofit.client.ApacheClient;
+18cb07d47f5c4b7fc7c814b0fa5b34abb1ae7f7d,ApacheClient.java,import retrofit.http.mime.TypedOutput;,import retrofit.mime.TypedByteArray;
+18cb07d47f5c4b7fc7c814b0fa5b34abb1ae7f7d,Request.java,import retrofit.http.mime.TypedOutput;,import retrofit.mime.TypedOutput;
+18cb07d47f5c4b7fc7c814b0fa5b34abb1ae7f7d,Response.java,import retrofit.http.mime.TypedInput;,import retrofit.mime.TypedInput;
+18cb07d47f5c4b7fc7c814b0fa5b34abb1ae7f7d,UrlConnectionClient.java,import retrofit.http.mime.TypedOutput;,import retrofit.mime.TypedInput;
+18cb07d47f5c4b7fc7c814b0fa5b34abb1ae7f7d,Converter.java,import retrofit.http.mime.TypedOutput;,import retrofit.mime.TypedInput;
+18cb07d47f5c4b7fc7c814b0fa5b34abb1ae7f7d,GsonConverter.java,import retrofit.http.mime.TypedOutput;,import retrofit.mime.MimeUtil;
+18cb07d47f5c4b7fc7c814b0fa5b34abb1ae7f7d,CallbackRunnableTest.java,import static retrofit.http.Utils.SynchronousExecutor;,import static retrofit.Utils.SynchronousExecutor;
+18cb07d47f5c4b7fc7c814b0fa5b34abb1ae7f7d,RequestBuilderTest.java,import retrofit.http.mime.TypedString;,import retrofit.converter.Converter;
+18cb07d47f5c4b7fc7c814b0fa5b34abb1ae7f7d,RequestBuilderTest.java,import static retrofit.http.RestMethodInfo.RequestType;,import static retrofit.RestMethodInfo.NO_BODY;
+18cb07d47f5c4b7fc7c814b0fa5b34abb1ae7f7d,RestAdapterTest.java,import retrofit.http.mime.TypedString;,import retrofit.converter.ConversionException;
+18cb07d47f5c4b7fc7c814b0fa5b34abb1ae7f7d,RestAdapterTest.java,import static retrofit.http.Utils.SynchronousExecutor;,import static retrofit.Profiler.RequestInformation;
+18cb07d47f5c4b7fc7c814b0fa5b34abb1ae7f7d,RestMethodInfoTest.java,import retrofit.http.mime.TypedOutput;,import retrofit.http.Body;
+18cb07d47f5c4b7fc7c814b0fa5b34abb1ae7f7d,RestMethodInfoTest.java,import static retrofit.http.RestMethodInfo.RequestType.SIMPLE;,import static retrofit.RestMethodInfo.NO_BODY;
+18cb07d47f5c4b7fc7c814b0fa5b34abb1ae7f7d,TestingUtils.java,import retrofit.http.mime.TypedOutput;,import retrofit.mime.MultipartTypedOutput;
+18cb07d47f5c4b7fc7c814b0fa5b34abb1ae7f7d,ApacheClientTest.java,import retrofit.http.mime.TypedString;,import retrofit.TestingUtils;
+18cb07d47f5c4b7fc7c814b0fa5b34abb1ae7f7d,ApacheClientTest.java,import static retrofit.http.client.ApacheClient.TypedOutputEntity;,import static retrofit.TestingUtils.assertBytes;
+18cb07d47f5c4b7fc7c814b0fa5b34abb1ae7f7d,UrlConnectionClientTest.java,import retrofit.http.mime.TypedString;,import retrofit.TestingUtils;
+18cb07d47f5c4b7fc7c814b0fa5b34abb1ae7f7d,UrlConnectionClientTest.java,import static retrofit.http.TestingUtils.assertBytes;,import static retrofit.TestingUtils.assertBytes;
+18cb07d47f5c4b7fc7c814b0fa5b34abb1ae7f7d,MimeUtilTest.java,import static retrofit.http.Utils.parseCharset;,import static retrofit.mime.MimeUtil.parseCharset;
+18cb07d47f5c4b7fc7c814b0fa5b34abb1ae7f7d,GitHubClient.java,import retrofit.http.RestAdapter;,import retrofit.RestAdapter;
+6203ad9f81028f68e4b8b67100d9c7c0bab80b31,ErrorHandlerTest.java,import static org.mockito.Matchers.eq;,import static org.mockito.Mockito.doReturn;
+7ddaabb80d098909e3c809c865f9938d8a6eb18e,RequestBuilderTest.java,import static retrofit.RestMethodInfo.NO_BODY;,import static retrofit.RestMethodInfo.ParamUsage;
+7ddaabb80d098909e3c809c865f9938d8a6eb18e,RestMethodInfoTest.java,import static retrofit.RestMethodInfo.NO_BODY;,import static retrofit.RestMethodInfo.ParamUsage.BODY;
+3cbaaf2a3092daa617b60aa44b62eabe36e23dd7,RequestBuilderTest.java,import static retrofit.RestMethodInfo.NO_BODY;,import static retrofit.RestMethodInfo.ParamUsage;
+3cbaaf2a3092daa617b60aa44b62eabe36e23dd7,RestMethodInfoTest.java,import static retrofit.RestMethodInfo.NO_BODY;,import static retrofit.RestMethodInfo.ParamUsage.BODY;
+16bca3e7afe22e6868315f3a6d083464f5b082bf,RequestBuilder.java,"  @Override public void addPathParam(String name, String value)","  @Override public void addPathParam(String name, String value, Boolean disableUrlEncoding)"
+16bca3e7afe22e6868315f3a6d083464f5b082bf,RequestBuilder.java,"  @Override public void addQueryParam(String name, String value)","  @Override public void addQueryParam(String name, String value, Boolean disableUrlEncoding)"
+16bca3e7afe22e6868315f3a6d083464f5b082bf,RequestInterceptor.java,"    void addPathParam(String name, String value)","    void addPathParam(String name, String value, Boolean disableUrlEncoding)"
+16bca3e7afe22e6868315f3a6d083464f5b082bf,RequestInterceptor.java,"    void addQueryParam(String name, String value)","    void addQueryParam(String name, String value, Boolean disableUrlEncoding)"
+bcfc6ff673a9344172920415a04eaa904a90e78a,JacksonConverterTest.java,,import com.fasterxml.jackson.annotation.JsonProperty;
+bcfc6ff673a9344172920415a04eaa904a90e78a,JacksonConverterTest.java,import com.fasterxml.jackson.databind.ObjectMapper;,import static org.fest.assertions.api.Assertions.assertThat;
+b8d81c6b6521d251b8143725951e07e36cbbb167,RestAdapter.java,import rx.concurrency.Schedulers;,import rx.schedulers.Schedulers;
+4eaf974bbde6dc7eb4a99a0c5bcfe27d1d6cde18,RestMethodInfo.java,  private void validatePathName(String name),"  private void validatePathName(int index, String name)"
+414f27419e5daffdf6a2e88ef6a122eab983f6ea,RestMethodInfo.java,  private void validatePathName(String name),"  private void validatePathName(int index, String name)"
+4732786eadb5e5d8afd23461ff40077f99952c15,MockRestAdapter.java,import rx.concurrency.Schedulers;,import rx.schedulers.Schedulers;
+b4121b9056bd23d884cd2cfdd43c1790c4007322,MockRestAdapter.java,import rx.concurrency.Schedulers;,import rx.schedulers.Schedulers;
+990521c87677903cd18841a5454d52bc37bc2985,JacksonConverterTest.java,import static org.fest.assertions.api.Assertions.assertThat;,import static org.assertj.core.api.Assertions.assertThat;
+990521c87677903cd18841a5454d52bc37bc2985,ProtoConverterTest.java,import static org.fest.assertions.api.Assertions.assertThat;,import static org.assertj.core.api.Assertions.assertThat;
+990521c87677903cd18841a5454d52bc37bc2985,SimpleXMLConverterTest.java,import static org.fest.assertions.api.Assertions.assertThat;,import static org.assertj.core.api.Assertions.assertThat;
+990521c87677903cd18841a5454d52bc37bc2985,WireConverterTest.java,import static org.fest.assertions.api.Assertions.assertThat;,import static org.assertj.core.api.Assertions.assertThat;
+990521c87677903cd18841a5454d52bc37bc2985,MockRestAdapterTest.java,import static org.fest.assertions.api.Assertions.assertThat;,import static org.assertj.core.api.Assertions.assertThat;
+990521c87677903cd18841a5454d52bc37bc2985,ErrorHandlerTest.java,import static org.fest.assertions.api.Assertions.assertThat;,import static org.assertj.core.api.Assertions.assertThat;
+990521c87677903cd18841a5454d52bc37bc2985,RequestBuilderTest.java,import static org.fest.assertions.api.Assertions.fail;,import static org.assertj.core.api.Assertions.assertThat;
+990521c87677903cd18841a5454d52bc37bc2985,RestAdapterTest.java,import static org.fest.assertions.api.Assertions.fail;,import static org.assertj.core.api.Assertions.assertThat;
+990521c87677903cd18841a5454d52bc37bc2985,RestMethodInfoTest.java,import static org.fest.assertions.api.Assertions.assertThat;,import static org.assertj.core.api.Assertions.assertThat;
+990521c87677903cd18841a5454d52bc37bc2985,TestingUtils.java,import static org.fest.assertions.api.Assertions.assertThat;,import static org.assertj.core.api.Assertions.assertThat;
+990521c87677903cd18841a5454d52bc37bc2985,UrlFetchClientTest.java,import static org.fest.assertions.api.Assertions.assertThat;,import static org.assertj.core.api.Assertions.assertThat;
+990521c87677903cd18841a5454d52bc37bc2985,ApacheClientTest.java,import static org.fest.assertions.api.Assertions.assertThat;,import static org.assertj.core.api.Assertions.assertThat;
+990521c87677903cd18841a5454d52bc37bc2985,UrlConnectionClientTest.java,import static org.fest.assertions.api.Assertions.assertThat;,import static org.assertj.core.api.Assertions.assertThat;
+990521c87677903cd18841a5454d52bc37bc2985,FormUrlEncodingTypedOutputTest.java,import static org.fest.assertions.api.Assertions.assertThat;,import static org.assertj.core.api.Assertions.assertThat;
+990521c87677903cd18841a5454d52bc37bc2985,MimeUtilTest.java,import static org.fest.assertions.api.Assertions.assertThat;,import static org.assertj.core.api.Assertions.assertThat;
+990521c87677903cd18841a5454d52bc37bc2985,MultipartTypedOutputTest.java,import static org.fest.assertions.api.Assertions.assertThat;,import static org.assertj.core.api.Assertions.assertThat;
+990521c87677903cd18841a5454d52bc37bc2985,TypedByteArrayTest.java,import static org.fest.assertions.api.Assertions.assertThat;,import static org.assertj.core.api.Assertions.assertThat;
+990521c87677903cd18841a5454d52bc37bc2985,TypedFileTest.java,import static org.fest.assertions.api.Assertions.assertThat;,import static org.assertj.core.api.Assertions.assertThat;
+fe00c5004ffff263c5eb6d2009634ae05f2a7414,JacksonConverterTest.java,import static org.fest.assertions.api.Assertions.assertThat;,import static org.assertj.core.api.Assertions.assertThat;
+fe00c5004ffff263c5eb6d2009634ae05f2a7414,ProtoConverterTest.java,import static org.fest.assertions.api.Assertions.assertThat;,import static org.assertj.core.api.Assertions.assertThat;
+fe00c5004ffff263c5eb6d2009634ae05f2a7414,SimpleXMLConverterTest.java,import static org.fest.assertions.api.Assertions.assertThat;,import static org.assertj.core.api.Assertions.assertThat;
+fe00c5004ffff263c5eb6d2009634ae05f2a7414,WireConverterTest.java,import static org.fest.assertions.api.Assertions.assertThat;,import static org.assertj.core.api.Assertions.assertThat;
+fe00c5004ffff263c5eb6d2009634ae05f2a7414,MockRestAdapterTest.java,import static org.fest.assertions.api.Assertions.assertThat;,import static org.assertj.core.api.Assertions.assertThat;
+fe00c5004ffff263c5eb6d2009634ae05f2a7414,ErrorHandlerTest.java,import static org.fest.assertions.api.Assertions.assertThat;,import static org.assertj.core.api.Assertions.assertThat;
+fe00c5004ffff263c5eb6d2009634ae05f2a7414,RequestBuilderTest.java,import static org.fest.assertions.api.Assertions.fail;,import static org.assertj.core.api.Assertions.assertThat;
+fe00c5004ffff263c5eb6d2009634ae05f2a7414,RestAdapterTest.java,import static org.fest.assertions.api.Assertions.fail;,import static org.assertj.core.api.Assertions.assertThat;
+fe00c5004ffff263c5eb6d2009634ae05f2a7414,RestMethodInfoTest.java,import static org.fest.assertions.api.Assertions.assertThat;,import static org.assertj.core.api.Assertions.assertThat;
+fe00c5004ffff263c5eb6d2009634ae05f2a7414,TestingUtils.java,import static org.fest.assertions.api.Assertions.assertThat;,import static org.assertj.core.api.Assertions.assertThat;
+fe00c5004ffff263c5eb6d2009634ae05f2a7414,UrlFetchClientTest.java,import static org.fest.assertions.api.Assertions.assertThat;,import static org.assertj.core.api.Assertions.assertThat;
+fe00c5004ffff263c5eb6d2009634ae05f2a7414,ApacheClientTest.java,import static org.fest.assertions.api.Assertions.assertThat;,import static org.assertj.core.api.Assertions.assertThat;
+fe00c5004ffff263c5eb6d2009634ae05f2a7414,UrlConnectionClientTest.java,import static org.fest.assertions.api.Assertions.assertThat;,import static org.assertj.core.api.Assertions.assertThat;
+fe00c5004ffff263c5eb6d2009634ae05f2a7414,FormUrlEncodingTypedOutputTest.java,import static org.fest.assertions.api.Assertions.assertThat;,import static org.assertj.core.api.Assertions.assertThat;
+fe00c5004ffff263c5eb6d2009634ae05f2a7414,MimeUtilTest.java,import static org.fest.assertions.api.Assertions.assertThat;,import static org.assertj.core.api.Assertions.assertThat;
+fe00c5004ffff263c5eb6d2009634ae05f2a7414,MultipartTypedOutputTest.java,import static org.fest.assertions.api.Assertions.assertThat;,import static org.assertj.core.api.Assertions.assertThat;
+fe00c5004ffff263c5eb6d2009634ae05f2a7414,TypedByteArrayTest.java,import static org.fest.assertions.api.Assertions.assertThat;,import static org.assertj.core.api.Assertions.assertThat;
+fe00c5004ffff263c5eb6d2009634ae05f2a7414,TypedFileTest.java,import static org.fest.assertions.api.Assertions.assertThat;,import static org.assertj.core.api.Assertions.assertThat;
+9b892484ddaeaaf0589cca7295071e3c635f2ac9,MockRestAdapter.java,import rx.Subscription;,import rx.Subscriber;
+9b892484ddaeaaf0589cca7295071e3c635f2ac9,MockRestAdapterTest.java,import rx.util.functions.Action1;,import rx.functions.Action1;
+9b892484ddaeaaf0589cca7295071e3c635f2ac9,RestAdapter.java,import rx.Subscription;,import rx.Subscriber;
+9b892484ddaeaaf0589cca7295071e3c635f2ac9,RestAdapterTest.java,import rx.util.functions.Action1;,import rx.functions.Action1;
+6dd5a628075aeb12f52667c3404c331fcc223eca,MockRestAdapter.java,import rx.Subscription;,import rx.Subscriber;
+6dd5a628075aeb12f52667c3404c331fcc223eca,MockRestAdapterTest.java,import rx.util.functions.Action1;,import rx.functions.Action1;
+6dd5a628075aeb12f52667c3404c331fcc223eca,RestAdapter.java,import rx.Subscription;,import rx.Subscriber;
+6dd5a628075aeb12f52667c3404c331fcc223eca,RestAdapterTest.java,import rx.util.functions.Action1;,import rx.functions.Action1;
+b16374e5c5624bd138f93164026b7b12150d1962,RestMethodInfo.java,import retrofit.http.Raw;,import retrofit.http.Streaming;
+5795931d159f0a591e5dad3d9de6f8d0e9785413,MultipartTypedOutput.java,"  private static byte[] buildHeader(String name, TypedOutput value)","  private static byte[] buildHeader(String name, String transferEncoding, TypedOutput value)"
+73db452374ab949c69d60cc66872fa07d751b000,MultipartTypedOutput.java,"  private static byte[] buildHeader(String name, TypedOutput value)","  private static byte[] buildHeader(String name, String transferEncoding, TypedOutput value)"
+3a6b251633bf533751c66594ded8b827ff67c300,RequestBuilderTest.java,import java.lang.annotation.Annotation;,import java.io.UnsupportedEncodingException;
+3a6b251633bf533751c66594ded8b827ff67c300,RequestBuilderTest.java,import static retrofit.mime.MultipartTypedOutput.DEFAULT_TRANSFER_ENCODING;,import static org.junit.Assert.fail;
+05c6ee15834078e18da2bba80136d9cb446c2d60,RequestBuilderTest.java,import java.lang.annotation.Annotation;,import java.io.UnsupportedEncodingException;
+05c6ee15834078e18da2bba80136d9cb446c2d60,RequestBuilderTest.java,import static retrofit.mime.MultipartTypedOutput.DEFAULT_TRANSFER_ENCODING;,import static org.junit.Assert.fail;
+46598adb1da0f6d2498d9f8b815b170bf95fe1f8,RequestBuilder.java,"  private void addQueryParam(String name, String value, boolean urlEncodeValue)","  private void addQueryParam(String name, String value, boolean encodeName, boolean encodeValue)"
+46598adb1da0f6d2498d9f8b815b170bf95fe1f8,TestingUtils.java,      },  public static Method onlyMethod(Class c) {
+3436cfb51e67f229a2656cc46e4baa775c16c535,RequestBuilder.java,"  private void addQueryParam(String name, String value, boolean urlEncodeValue)","  private void addQueryParam(String name, String value, boolean encodeName, boolean encodeValue)"
+3436cfb51e67f229a2656cc46e4baa775c16c535,TestingUtils.java,      },  public static Method onlyMethod(Class c) {
+4cf02b2e5a45661e28f9dd358f1f25426a25901c,MockRestAdapter.java,import rx.Subscriber;,import rx.Scheduler;
+702e00565a7c7df02a610ceed648a012827d1dbc,MockRestAdapter.java,import rx.Subscriber;,import rx.Scheduler;
+93371a4c37f22b83df32edca3b0af376642a6d7d,RequestBuilder.java,import java.util.Arrays;,import java.util.Collections;
+c175b65d9387e455eb52ad77ce61ca6858606542,OkClient.java,import com.squareup.okhttp.OkUrlFactory;,import com.squareup.okhttp.RequestBody;
+c175b65d9387e455eb52ad77ce61ca6858606542,OkClient.java,import java.net.URL;,import java.io.InputStream;
+90c363ee0f9a624f2a9b2d22c8ab81c470dbef39,OkClient.java,import com.squareup.okhttp.OkUrlFactory;,import com.squareup.okhttp.RequestBody;
+90c363ee0f9a624f2a9b2d22c8ab81c470dbef39,OkClient.java,import java.net.URL;,import java.io.InputStream;
+56f11374c2f5d037e57d274a3c72f9694cd9e05c,RestAdapter.java,import java.util.concurrent.TimeUnit;,import java.util.concurrent.atomic.AtomicReference;
+e99dcea7483cbd3a4988c4c23f50ac0f7fbd25d7,RestAdapter.java,import java.util.concurrent.TimeUnit;,import java.util.concurrent.atomic.AtomicReference;
+14e9c0c01b73d1f33fde741d8e07c4b5baf40b84,Endpoint.java,  String getUrl();,import static retrofit.Utils.checkNotNull;
+8b56aea799b8aa32b174b9a7aa5387db00e565f1,Endpoint.java,  String getUrl();,import static retrofit.Utils.checkNotNull;
+f044a78ed5b137f1e750d238f4e49803cf83636b,Platform.java,import com.google.gson.Gson;,import android.os.Handler;
+a1b4c04a41d5c5fc7a3ca92bc839b092770ba610,Platform.java,import com.google.gson.Gson;,import android.os.Handler;
+f5f0857c425905282c4b8e6a4bfeeab14aa1a2a6,MockHttpException.java,import retrofit.client.Header;,import com.squareup.okhttp.Headers;
+f5f0857c425905282c4b8e6a4bfeeab14aa1a2a6,Request.java,import java.util.List;,import com.squareup.okhttp.Headers;
+f5f0857c425905282c4b8e6a4bfeeab14aa1a2a6,Response.java,import java.util.List;,import com.squareup.okhttp.Headers;
+f5f0857c425905282c4b8e6a4bfeeab14aa1a2a6,ErrorHandlerTest.java,import java.util.Collections;,import com.squareup.okhttp.Headers;
+6101f407072f63828a656e4c2da4c112b5eca356,MockHttpException.java,import retrofit.client.Header;,import com.squareup.okhttp.Headers;
+6101f407072f63828a656e4c2da4c112b5eca356,Request.java,import java.util.List;,import com.squareup.okhttp.Headers;
+6101f407072f63828a656e4c2da4c112b5eca356,Response.java,import java.util.List;,import com.squareup.okhttp.Headers;
+6101f407072f63828a656e4c2da4c112b5eca356,ErrorHandlerTest.java,import java.util.Collections;,import com.squareup.okhttp.Headers;
+afd09e970ee8c2e4cebe3d71c9f5b393e4d1ac11,RestMethodInfo.java,import retrofit.http.RestMethod;,import retrofit.http.HTTP;
+afd09e970ee8c2e4cebe3d71c9f5b393e4d1ac11,HTTP.java,import static java.lang.annotation.ElementType.ANNOTATION_TYPE;,import static java.lang.annotation.ElementType.METHOD;
+cf58cfd2c79f6e905c86e310fa7d3d8ff59b2bc8,RestMethodInfo.java,import retrofit.http.RestMethod;,import retrofit.http.HTTP;
+cf58cfd2c79f6e905c86e310fa7d3d8ff59b2bc8,HTTP.java,import static java.lang.annotation.ElementType.ANNOTATION_TYPE;,import static java.lang.annotation.ElementType.METHOD;
+b9fe6f99398843d84cb967cea29a53996019e4ba,JacksonConverterTest.java,import java.io.ByteArrayOutputStream;,import com.squareup.okhttp.MediaType;
+b9fe6f99398843d84cb967cea29a53996019e4ba,ProtoConverterTest.java,import java.io.ByteArrayOutputStream;,import com.squareup.okhttp.MediaType;
+b9fe6f99398843d84cb967cea29a53996019e4ba,SimpleXMLConverter.java,import java.io.ByteArrayOutputStream;,import com.squareup.okhttp.MediaType;
+b9fe6f99398843d84cb967cea29a53996019e4ba,SimpleXMLConverter.java,import org.simpleframework.xml.core.Persister;,import okio.Buffer;
+b9fe6f99398843d84cb967cea29a53996019e4ba,SimpleXMLConverter.java,import retrofit.mime.TypedOutput;,import org.simpleframework.xml.core.Persister;
+b9fe6f99398843d84cb967cea29a53996019e4ba,SimpleXMLConverterTest.java,import java.io.ByteArrayOutputStream;,import com.squareup.okhttp.MediaType;
+b9fe6f99398843d84cb967cea29a53996019e4ba,WireConverterTest.java,import java.io.ByteArrayOutputStream;,import com.squareup.okhttp.MediaType;
+b9fe6f99398843d84cb967cea29a53996019e4ba,MockHttpException.java,import retrofit.client.Response;,import com.squareup.okhttp.Protocol;
+b9fe6f99398843d84cb967cea29a53996019e4ba,Callback.java,import retrofit.client.Response;,import com.squareup.okhttp.Response;
+b9fe6f99398843d84cb967cea29a53996019e4ba,RequestBuilder.java,import retrofit.client.Request;,import okio.BufferedSink;
+b9fe6f99398843d84cb967cea29a53996019e4ba,RequestBuilder.java,import retrofit.http.PartMap;,import retrofit.http.Header;
+b9fe6f99398843d84cb967cea29a53996019e4ba,Utils.java,import java.io.ByteArrayOutputStream;,import com.squareup.okhttp.MediaType;
+b9fe6f99398843d84cb967cea29a53996019e4ba,Utils.java,import retrofit.mime.TypedInput;,import okio.Buffer;
+b9fe6f99398843d84cb967cea29a53996019e4ba,GsonConverter.java,import retrofit.mime.TypedOutput;,import java.nio.charset.Charset;
+b9fe6f99398843d84cb967cea29a53996019e4ba,ErrorHandlerTest.java,import com.squareup.okhttp.Headers;,import com.squareup.okhttp.Interceptor;
+b9fe6f99398843d84cb967cea29a53996019e4ba,RequestBuilderTest.java,import java.io.ByteArrayOutputStream;,import com.squareup.okhttp.MediaType;
+b9fe6f99398843d84cb967cea29a53996019e4ba,RestAdapterTest.java,import java.util.concurrent.Executor;,import com.squareup.okhttp.OkHttpClient;
+b9fe6f99398843d84cb967cea29a53996019e4ba,RestAdapterTest.java,import static org.mockito.Mockito.when;,import static org.junit.Assert.assertTrue;
+b9fe6f99398843d84cb967cea29a53996019e4ba,GsonConverterTest.java,import java.io.ByteArrayOutputStream;,import com.squareup.okhttp.MediaType;
+763fe1639e3348480214873323caacd00cbd7fa6,JacksonConverterTest.java,import java.io.ByteArrayOutputStream;,import com.squareup.okhttp.MediaType;
+763fe1639e3348480214873323caacd00cbd7fa6,ProtoConverterTest.java,import java.io.ByteArrayOutputStream;,import com.squareup.okhttp.MediaType;
+763fe1639e3348480214873323caacd00cbd7fa6,SimpleXMLConverter.java,import java.io.ByteArrayOutputStream;,import com.squareup.okhttp.MediaType;
+763fe1639e3348480214873323caacd00cbd7fa6,SimpleXMLConverter.java,import org.simpleframework.xml.core.Persister;,import okio.Buffer;
+763fe1639e3348480214873323caacd00cbd7fa6,SimpleXMLConverter.java,import retrofit.mime.TypedOutput;,import org.simpleframework.xml.core.Persister;
+763fe1639e3348480214873323caacd00cbd7fa6,SimpleXMLConverterTest.java,import java.io.ByteArrayOutputStream;,import com.squareup.okhttp.MediaType;
+763fe1639e3348480214873323caacd00cbd7fa6,WireConverterTest.java,import java.io.ByteArrayOutputStream;,import com.squareup.okhttp.MediaType;
+763fe1639e3348480214873323caacd00cbd7fa6,MockHttpException.java,import retrofit.client.Response;,import com.squareup.okhttp.Protocol;
+763fe1639e3348480214873323caacd00cbd7fa6,Callback.java,import retrofit.client.Response;,import com.squareup.okhttp.Response;
+763fe1639e3348480214873323caacd00cbd7fa6,RequestBuilder.java,import retrofit.client.Request;,import okio.BufferedSink;
+763fe1639e3348480214873323caacd00cbd7fa6,RequestBuilder.java,import retrofit.http.PartMap;,import retrofit.http.Header;
+763fe1639e3348480214873323caacd00cbd7fa6,Utils.java,import java.io.ByteArrayOutputStream;,import com.squareup.okhttp.MediaType;
+763fe1639e3348480214873323caacd00cbd7fa6,Utils.java,import retrofit.mime.TypedInput;,import okio.Buffer;
+763fe1639e3348480214873323caacd00cbd7fa6,GsonConverter.java,import retrofit.mime.TypedOutput;,import java.nio.charset.Charset;
+763fe1639e3348480214873323caacd00cbd7fa6,ErrorHandlerTest.java,import com.squareup.okhttp.Headers;,import com.squareup.okhttp.Interceptor;
+763fe1639e3348480214873323caacd00cbd7fa6,RequestBuilderTest.java,import java.io.ByteArrayOutputStream;,import com.squareup.okhttp.MediaType;
+763fe1639e3348480214873323caacd00cbd7fa6,RestAdapterTest.java,import java.util.concurrent.Executor;,import com.squareup.okhttp.OkHttpClient;
+763fe1639e3348480214873323caacd00cbd7fa6,RestAdapterTest.java,import static org.mockito.Mockito.when;,import static org.junit.Assert.assertTrue;
+763fe1639e3348480214873323caacd00cbd7fa6,GsonConverterTest.java,import java.io.ByteArrayOutputStream;,import com.squareup.okhttp.MediaType;
+2ca195069c02c48d7d862913247e08000e282439,RestAdapter.java,import java.lang.reflect.Type;,import java.util.ArrayList;
+2ca195069c02c48d7d862913247e08000e282439,RestAdapterTest.java,import org.junit.Rule;,import java.lang.reflect.ParameterizedType;
+b7cf30902cbf06565dbc5ca5d1691686a7d2b601,RestAdapter.java,import java.lang.reflect.Type;,import java.util.ArrayList;
+b7cf30902cbf06565dbc5ca5d1691686a7d2b601,RestAdapterTest.java,import org.junit.Rule;,import java.lang.reflect.ParameterizedType;
+9b203b66891c1d363529a1b2b46c8968bf54d7cc,ObservableCallAdapterFactoryTest.java,import com.google.gson.reflect.TypeToken;,import com.google.common.reflect.TypeToken;
+9b203b66891c1d363529a1b2b46c8968bf54d7cc,ProtoConverterTest.java,import static retrofit.converter.PhoneProtos.Phone;,import static retrofit.PhoneProtos.Phone;
+9b203b66891c1d363529a1b2b46c8968bf54d7cc,OkHttpCall.java,import retrofit.converter.Converter;,import java.lang.reflect.Type;
+9b203b66891c1d363529a1b2b46c8968bf54d7cc,DefaultCallAdapterFactoryTest.java,import com.google.gson.reflect.TypeToken;,import com.google.common.reflect.TypeToken;
+9b203b66891c1d363529a1b2b46c8968bf54d7cc,MethodInfoTest.java,import com.squareup.okhttp.Response;,import com.google.common.reflect.TypeToken;
+9cc80b1f94be55f1133c48bda531957593aca6d5,ObservableCallAdapterFactoryTest.java,import com.google.gson.reflect.TypeToken;,import com.google.common.reflect.TypeToken;
+9cc80b1f94be55f1133c48bda531957593aca6d5,ProtoConverterTest.java,import static retrofit.converter.PhoneProtos.Phone;,import static retrofit.PhoneProtos.Phone;
+9cc80b1f94be55f1133c48bda531957593aca6d5,OkHttpCall.java,import retrofit.converter.Converter;,import java.lang.reflect.Type;
+9cc80b1f94be55f1133c48bda531957593aca6d5,DefaultCallAdapterFactoryTest.java,import com.google.gson.reflect.TypeToken;,import com.google.common.reflect.TypeToken;
+9cc80b1f94be55f1133c48bda531957593aca6d5,MethodInfoTest.java,import com.squareup.okhttp.Response;,import com.google.common.reflect.TypeToken;
+580d31ae906ac28f608427d4c4d2318a0e8b658a,CustomCallAdapter.java,import retrofit.RestAdapter;,import retrofit.Retrofit;
+580d31ae906ac28f608427d4c4d2318a0e8b658a,SimpleService.java,import retrofit.RestAdapter;,import retrofit.Retrofit;
+580d31ae906ac28f608427d4c4d2318a0e8b658a,SimpleMockService.java,import retrofit.RestAdapter;,import retrofit.MockRetrofit;
+b57a3a40bb0bbb9f73b95d0ee1ef08d1110f26f7,CustomCallAdapter.java,import retrofit.RestAdapter;,import retrofit.Retrofit;
+b57a3a40bb0bbb9f73b95d0ee1ef08d1110f26f7,SimpleService.java,import retrofit.RestAdapter;,import retrofit.Retrofit;
+b57a3a40bb0bbb9f73b95d0ee1ef08d1110f26f7,SimpleMockService.java,import retrofit.RestAdapter;,import retrofit.MockRetrofit;
+eac2c5f7190d148e72341ea289b69cae1ae2a866,GsonConverterTest.java,import com.squareup.okhttp.ResponseBody;,import com.google.gson.TypeAdapter;
+eac2c5f7190d148e72341ea289b69cae1ae2a866,JacksonConverterTest.java,import com.squareup.okhttp.ResponseBody;,import com.fasterxml.jackson.annotation.JsonAutoDetect;
+eac2c5f7190d148e72341ea289b69cae1ae2a866,JacksonConverterTest.java,import org.assertj.core.api.AbstractCharSequenceAssert;,import org.junit.Before;
+eac2c5f7190d148e72341ea289b69cae1ae2a866,MoshiConverterTest.java,import com.squareup.okhttp.ResponseBody;,import com.squareup.okhttp.mockwebserver.MockResponse;
+eac2c5f7190d148e72341ea289b69cae1ae2a866,ProtoConverterTest.java,import com.squareup.okhttp.ResponseBody;,import com.squareup.okhttp.mockwebserver.MockResponse;
+eac2c5f7190d148e72341ea289b69cae1ae2a866,ProtoConverterTest.java,import java.util.ArrayList;,import java.util.List;
+eac2c5f7190d148e72341ea289b69cae1ae2a866,ProtoConverterTest.java,import org.assertj.core.api.AbstractCharSequenceAssert;,import org.junit.Before;
+eac2c5f7190d148e72341ea289b69cae1ae2a866,SimpleXmlConverterTest.java,import com.squareup.okhttp.ResponseBody;,import com.squareup.okhttp.mockwebserver.MockResponse;
+eac2c5f7190d148e72341ea289b69cae1ae2a866,SimpleXmlConverterTest.java,import org.simpleframework.xml.Element;,import org.simpleframework.xml.core.ElementException;
+eac2c5f7190d148e72341ea289b69cae1ae2a866,WireConverterTest.java,import com.squareup.okhttp.ResponseBody;,import com.squareup.okhttp.mockwebserver.MockResponse;
+eac2c5f7190d148e72341ea289b69cae1ae2a866,WireConverterTest.java,import java.util.ArrayList;,import java.util.List;
+eac2c5f7190d148e72341ea289b69cae1ae2a866,WireConverterTest.java,import org.assertj.core.api.AbstractCharSequenceAssert;,import org.junit.Before;
+23034249f028253d6b53babaa1d7664b4f2d765f,GsonConverterTest.java,import com.squareup.okhttp.ResponseBody;,import com.google.gson.TypeAdapter;
+23034249f028253d6b53babaa1d7664b4f2d765f,JacksonConverterTest.java,import com.squareup.okhttp.ResponseBody;,import com.fasterxml.jackson.annotation.JsonAutoDetect;
+23034249f028253d6b53babaa1d7664b4f2d765f,JacksonConverterTest.java,import org.assertj.core.api.AbstractCharSequenceAssert;,import org.junit.Before;
+23034249f028253d6b53babaa1d7664b4f2d765f,MoshiConverterTest.java,import com.squareup.okhttp.ResponseBody;,import com.squareup.okhttp.mockwebserver.MockResponse;
+23034249f028253d6b53babaa1d7664b4f2d765f,ProtoConverterTest.java,import com.squareup.okhttp.ResponseBody;,import com.squareup.okhttp.mockwebserver.MockResponse;
+23034249f028253d6b53babaa1d7664b4f2d765f,ProtoConverterTest.java,import java.util.ArrayList;,import java.util.List;
+23034249f028253d6b53babaa1d7664b4f2d765f,ProtoConverterTest.java,import org.assertj.core.api.AbstractCharSequenceAssert;,import org.junit.Before;
+23034249f028253d6b53babaa1d7664b4f2d765f,SimpleXmlConverterTest.java,import com.squareup.okhttp.ResponseBody;,import com.squareup.okhttp.mockwebserver.MockResponse;
+23034249f028253d6b53babaa1d7664b4f2d765f,SimpleXmlConverterTest.java,import org.simpleframework.xml.Element;,import org.simpleframework.xml.core.ElementException;
+23034249f028253d6b53babaa1d7664b4f2d765f,WireConverterTest.java,import com.squareup.okhttp.ResponseBody;,import com.squareup.okhttp.mockwebserver.MockResponse;
+23034249f028253d6b53babaa1d7664b4f2d765f,WireConverterTest.java,import java.util.ArrayList;,import java.util.List;
+23034249f028253d6b53babaa1d7664b4f2d765f,WireConverterTest.java,import org.assertj.core.api.AbstractCharSequenceAssert;,import org.junit.Before;
+fe6d0f9b2a68063a086fa9da80d04293fbe3becf,GsonConverter.java,import com.google.gson.Gson;,import com.google.gson.TypeAdapter;
+fe6d0f9b2a68063a086fa9da80d04293fbe3becf,GsonConverter.java,import java.lang.reflect.Type;,import java.io.OutputStreamWriter;
+fe6d0f9b2a68063a086fa9da80d04293fbe3becf,JacksonConverter.java,import com.fasterxml.jackson.databind.ObjectMapper;,import com.fasterxml.jackson.databind.ObjectReader;
+fe6d0f9b2a68063a086fa9da80d04293fbe3becf,MoshiConverter.java,import com.squareup.moshi.Moshi;,import com.squareup.moshi.JsonAdapter;
+fe6d0f9b2a68063a086fa9da80d04293fbe3becf,ProtoConverter.java,import com.google.protobuf.AbstractMessageLite;,import com.google.protobuf.InvalidProtocolBufferException;
+0c67593822c972a0e4f1a6e19ac89a969c2abb89,GsonConverter.java,import com.google.gson.Gson;,import com.google.gson.TypeAdapter;
+0c67593822c972a0e4f1a6e19ac89a969c2abb89,GsonConverter.java,import java.lang.reflect.Type;,import java.io.OutputStreamWriter;
+0c67593822c972a0e4f1a6e19ac89a969c2abb89,JacksonConverter.java,import com.fasterxml.jackson.databind.ObjectMapper;,import com.fasterxml.jackson.databind.ObjectReader;
+0c67593822c972a0e4f1a6e19ac89a969c2abb89,MoshiConverter.java,import com.squareup.moshi.Moshi;,import com.squareup.moshi.JsonAdapter;
+0c67593822c972a0e4f1a6e19ac89a969c2abb89,ProtoConverter.java,import com.google.protobuf.AbstractMessageLite;,import com.google.protobuf.InvalidProtocolBufferException;
+f15eee44eda9750b9d1341ff0801385426775e1f,OkHttpCall.java,import static retrofit.Utils.closeQueitly;,import static retrofit.Utils.closeQuietly;
+f15eee44eda9750b9d1341ff0801385426775e1f,OkHttpResponseBodyConverter.java,import static retrofit.Utils.closeQueitly;,import static retrofit.Utils.closeQuietly;
+f15eee44eda9750b9d1341ff0801385426775e1f,RequestFactoryParser.java,import retrofit.http.Streaming;,
+03439b77fd296b2141590dbf069f36c4a0657f47,OkHttpCall.java,import static retrofit.Utils.closeQueitly;,import static retrofit.Utils.closeQuietly;
+03439b77fd296b2141590dbf069f36c4a0657f47,OkHttpResponseBodyConverter.java,import static retrofit.Utils.closeQueitly;,import static retrofit.Utils.closeQuietly;
+03439b77fd296b2141590dbf069f36c4a0657f47,RequestFactoryParser.java,import retrofit.http.Streaming;,
+1f21bdd87075c09c645906f4330f5a05ccc5cf37,CallTest.java,import static java.util.concurrent.TimeUnit.MILLISECONDS;,import static com.squareup.okhttp.mockwebserver.SocketPolicy.DISCONNECT_DURING_RESPONSE_BODY;
+28ac7dcce703962c907373f808dff508e1205cb0,CallTest.java,import static java.util.concurrent.TimeUnit.MILLISECONDS;,import static com.squareup.okhttp.mockwebserver.SocketPolicy.DISCONNECT_DURING_RESPONSE_BODY;
+af18c61865eb67843acb18512b95ceb909229ecc,ObservableCallAdapterFactoryTest.java,import com.squareup.okhttp.mockwebserver.rule.MockWebServerRule;,import com.squareup.okhttp.mockwebserver.MockWebServer;
+af18c61865eb67843acb18512b95ceb909229ecc,RetrofitTest.java,import com.squareup.okhttp.mockwebserver.rule.MockWebServerRule;,import com.squareup.okhttp.mockwebserver.MockWebServer;
+53bcdff8c39be9c7b3d8eced9f8bdabc53d2dc96,ObservableCallAdapterFactoryTest.java,import com.squareup.okhttp.mockwebserver.rule.MockWebServerRule;,import com.squareup.okhttp.mockwebserver.MockWebServer;
+53bcdff8c39be9c7b3d8eced9f8bdabc53d2dc96,RetrofitTest.java,import com.squareup.okhttp.mockwebserver.rule.MockWebServerRule;,import com.squareup.okhttp.mockwebserver.MockWebServer;
+21f327cc70d010af01d57ddb2ff209bef7f05033,NetworkBehaviorTest.java,import retrofit.mock.Behavior;,import retrofit.mock.NetworkBehavior;
+fafb6811794fb43250d3dd94e06e7679c56a1f3f,NetworkBehaviorTest.java,import retrofit.mock.Behavior;,import retrofit.mock.NetworkBehavior;
+74d28388f9e17814cc6bea87670ab48ee0561e37,Part.java,import retrofit.Retrofit;,import retrofit.Converter;
+74d28388f9e17814cc6bea87670ab48ee0561e37,PartMap.java,import retrofit.Retrofit;,import retrofit.Converter;
+90593dcbf87aff6b64a6b13332dfda8e67ab22da,Part.java,import retrofit.Retrofit;,import retrofit.Converter;
+90593dcbf87aff6b64a6b13332dfda8e67ab22da,PartMap.java,import retrofit.Retrofit;,import retrofit.Converter;
+c43f1ec30d1e2d6a9b7b3863cd19e01b72c5fd32,MethodHandler.java,import com.squareup.okhttp.ResponseBody;,import java.lang.annotation.Annotation;
+c43f1ec30d1e2d6a9b7b3863cd19e01b72c5fd32,RetrofitTest.java,      @Override public CallAdapter<String> get(Type returnType),"      @Override public CallAdapter<String> get(Type returnType, Annotation[] annotations)"
+d7d684ec6dc5f86eb4de8bb436097b832aec30c9,MethodHandler.java,import com.squareup.okhttp.ResponseBody;,import java.lang.annotation.Annotation;
+d7d684ec6dc5f86eb4de8bb436097b832aec30c9,RetrofitTest.java,      @Override public CallAdapter<String> get(Type returnType),"      @Override public CallAdapter<String> get(Type returnType, Annotation[] annotations)"
+3a777472334263c6f6d1e9cc255b1288bcc02e48,RxJavaCallAdapterFactory.java,        @Override public void onResponse(Response<T> response),"        @Override public void onResponse(Response<T> response, Retrofit retrofit)"
+3a777472334263c6f6d1e9cc255b1288bcc02e48,BehaviorCall.java,            @Override public void onResponse(final Response<T> response),"            @Override public void onResponse(final Response<T> response, Retrofit retrofit)"
+3a777472334263c6f6d1e9cc255b1288bcc02e48,BehaviorCall.java,      @Override public void onResponse(Response<T> response),"      @Override public void onResponse(Response<T> response, Retrofit retrofit)"
+3a777472334263c6f6d1e9cc255b1288bcc02e48,MockRetrofitTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Response<String> response, Retrofit retrofit)"
+3a777472334263c6f6d1e9cc255b1288bcc02e48,MockRetrofitTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Response<String> response, Retrofit retrofit)"
+3a777472334263c6f6d1e9cc255b1288bcc02e48,MockRetrofitTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Response<String> response, Retrofit retrofit)"
+3a777472334263c6f6d1e9cc255b1288bcc02e48,MockRetrofitTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Response<String> response, Retrofit retrofit)"
+3a777472334263c6f6d1e9cc255b1288bcc02e48,MockRetrofitTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Response<String> response, Retrofit retrofit)"
+3a777472334263c6f6d1e9cc255b1288bcc02e48,Callback.java,  void onResponse(Response<T> response),"  void onResponse(Response<T> response, Retrofit retrofit)"
+3a777472334263c6f6d1e9cc255b1288bcc02e48,ExecutorCallAdapterFactory.java,    @Override public void onResponse(final Response<T> response),"    @Override public void onResponse(final Response<T> response, final Retrofit retrofit)"
+3a777472334263c6f6d1e9cc255b1288bcc02e48,CallTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Response<String> response, Retrofit retrofit)"
+3a777472334263c6f6d1e9cc255b1288bcc02e48,CallTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Response<String> response, Retrofit retrofit)"
+3a777472334263c6f6d1e9cc255b1288bcc02e48,CallTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Response<String> response, Retrofit retrofit)"
+3a777472334263c6f6d1e9cc255b1288bcc02e48,CallTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Response<String> response, Retrofit retrofit)"
+3a777472334263c6f6d1e9cc255b1288bcc02e48,CallTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Response<String> response, Retrofit retrofit)"
+3a777472334263c6f6d1e9cc255b1288bcc02e48,CallTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Response<String> response, Retrofit retrofit)"
+3a777472334263c6f6d1e9cc255b1288bcc02e48,CallTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Response<String> response, Retrofit retrofit)"
+3a777472334263c6f6d1e9cc255b1288bcc02e48,RetrofitTest.java,      @Override public void onResponse(Response<ResponseBody> response),"      @Override public void onResponse(Response<ResponseBody> response, Retrofit retrofit)"
+3a777472334263c6f6d1e9cc255b1288bcc02e48,RetrofitTest.java,      @Override public void onResponse(Response<ResponseBody> response),"      @Override public void onResponse(Response<ResponseBody> response, Retrofit retrofit)"
+3a777472334263c6f6d1e9cc255b1288bcc02e48,CustomCallAdapter.java,      @Override public void onResponse(Response<T> response),"      @Override public void onResponse(Response<T> response, Retrofit retrofit)"
+a704966767ab96f286986a3f9e0e79f6693db1ed,RxJavaCallAdapterFactory.java,        @Override public void onResponse(Response<T> response),"        @Override public void onResponse(Response<T> response, Retrofit retrofit)"
+a704966767ab96f286986a3f9e0e79f6693db1ed,BehaviorCall.java,            @Override public void onResponse(final Response<T> response),"            @Override public void onResponse(final Response<T> response, Retrofit retrofit)"
+a704966767ab96f286986a3f9e0e79f6693db1ed,BehaviorCall.java,      @Override public void onResponse(Response<T> response),"      @Override public void onResponse(Response<T> response, Retrofit retrofit)"
+a704966767ab96f286986a3f9e0e79f6693db1ed,MockRetrofitTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Response<String> response, Retrofit retrofit)"
+a704966767ab96f286986a3f9e0e79f6693db1ed,MockRetrofitTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Response<String> response, Retrofit retrofit)"
+a704966767ab96f286986a3f9e0e79f6693db1ed,MockRetrofitTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Response<String> response, Retrofit retrofit)"
+a704966767ab96f286986a3f9e0e79f6693db1ed,MockRetrofitTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Response<String> response, Retrofit retrofit)"
+a704966767ab96f286986a3f9e0e79f6693db1ed,MockRetrofitTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Response<String> response, Retrofit retrofit)"
+a704966767ab96f286986a3f9e0e79f6693db1ed,Callback.java,  void onResponse(Response<T> response),"  void onResponse(Response<T> response, Retrofit retrofit)"
+a704966767ab96f286986a3f9e0e79f6693db1ed,ExecutorCallAdapterFactory.java,    @Override public void onResponse(final Response<T> response),"    @Override public void onResponse(final Response<T> response, final Retrofit retrofit)"
+a704966767ab96f286986a3f9e0e79f6693db1ed,CallTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Response<String> response, Retrofit retrofit)"
+a704966767ab96f286986a3f9e0e79f6693db1ed,CallTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Response<String> response, Retrofit retrofit)"
+a704966767ab96f286986a3f9e0e79f6693db1ed,CallTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Response<String> response, Retrofit retrofit)"
+a704966767ab96f286986a3f9e0e79f6693db1ed,CallTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Response<String> response, Retrofit retrofit)"
+a704966767ab96f286986a3f9e0e79f6693db1ed,CallTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Response<String> response, Retrofit retrofit)"
+a704966767ab96f286986a3f9e0e79f6693db1ed,CallTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Response<String> response, Retrofit retrofit)"
+a704966767ab96f286986a3f9e0e79f6693db1ed,CallTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Response<String> response, Retrofit retrofit)"
+a704966767ab96f286986a3f9e0e79f6693db1ed,RetrofitTest.java,      @Override public void onResponse(Response<ResponseBody> response),"      @Override public void onResponse(Response<ResponseBody> response, Retrofit retrofit)"
+a704966767ab96f286986a3f9e0e79f6693db1ed,RetrofitTest.java,      @Override public void onResponse(Response<ResponseBody> response),"      @Override public void onResponse(Response<ResponseBody> response, Retrofit retrofit)"
+a704966767ab96f286986a3f9e0e79f6693db1ed,CustomCallAdapter.java,      @Override public void onResponse(Response<T> response),"      @Override public void onResponse(Response<T> response, Retrofit retrofit)"
+a9c0512fa6f88933702bf0e12243f5a584c01f66,RequestBuilder.java,import java.net.URLEncoder;,import okio.Buffer;
+8effb8762ecd59fc288695de9ff7e1dfc9dfbe21,RequestBuilder.java,import java.net.URLEncoder;,import okio.Buffer;
+a30fd7a61d0fd59bbe04a99891aa4cc848256930,BuiltInConverters.java,final class BuiltInConverterFactory extends Converter.Factory {,import static retrofit.Utils.closeQuietly;
+f7b6595cca3ea39d300a9fb971f73ec8d4f11c41,BuiltInConverters.java,final class BuiltInConverterFactory extends Converter.Factory {,import static retrofit.Utils.closeQuietly;
+e64df3ebb2b24633c9723d39a44ee6a4eab1002a,GsonRequestBodyConverter.java,import com.google.gson.TypeAdapter;,import com.google.gson.Gson;
+e64df3ebb2b24633c9723d39a44ee6a4eab1002a,GsonResponseBodyConverter.java,import com.google.gson.TypeAdapter;,import com.google.gson.Gson;
+f45de6c52b42a987a3e30077f7275bc61b92a706,GsonRequestBodyConverter.java,import com.google.gson.TypeAdapter;,import com.google.gson.Gson;
+f45de6c52b42a987a3e30077f7275bc61b92a706,GsonResponseBodyConverter.java,import com.google.gson.TypeAdapter;,import com.google.gson.Gson;
+a727a43af93be6ddafab12a65545679bea0037f4,GsonRequestBodyConverter.java,import com.google.gson.Gson;,import com.google.gson.TypeAdapter;
+a727a43af93be6ddafab12a65545679bea0037f4,GsonResponseBodyConverter.java,import com.google.gson.Gson;,import com.google.gson.TypeAdapter;
+677e1ed0a28e61870206a3118a9b8e25541c69f7,GsonResponseBodyConverter.java,import com.google.gson.Gson;,import com.google.gson.TypeAdapter;
+fed4420381efab4c328f2fb25939f9950353b781,WireConverterFactory.java,import com.squareup.wire.Wire;,import com.squareup.wire.ProtoAdapter;
+fed4420381efab4c328f2fb25939f9950353b781,WireResponseBodyConverter.java,import com.squareup.wire.Wire;,import com.squareup.wire.ProtoAdapter;
+fed4420381efab4c328f2fb25939f9950353b781,Phone.java,import com.squareup.wire.ProtoField;,import com.squareup.wire.ProtoAdapter;
+fed4420381efab4c328f2fb25939f9950353b781,Phone.java,import static com.squareup.wire.Message.Label.OPTIONAL;,"public final class Phone extends Message<Phone, Phone.Builder> {"
+588adc3557c4a701fa21f7e2dc22b064a57b0b5f,WireConverterFactory.java,import com.squareup.wire.Wire;,import com.squareup.wire.ProtoAdapter;
+588adc3557c4a701fa21f7e2dc22b064a57b0b5f,WireResponseBodyConverter.java,import com.squareup.wire.Wire;,import com.squareup.wire.ProtoAdapter;
+588adc3557c4a701fa21f7e2dc22b064a57b0b5f,Phone.java,import com.squareup.wire.ProtoField;,import com.squareup.wire.ProtoAdapter;
+588adc3557c4a701fa21f7e2dc22b064a57b0b5f,Phone.java,import static com.squareup.wire.Message.Label.OPTIONAL;,"public final class Phone extends Message<Phone, Phone.Builder> {"
+4b2e64fc3eb777c2bc109527d5d77b05b347207e,RequestAction.java,"    @Override void perform(RequestBuilder builder, Object value)","    @Override void perform(RequestBuilder builder, Map<?, ?> value)"
+4b2e64fc3eb777c2bc109527d5d77b05b347207e,RequestAction.java,"    @Override void perform(RequestBuilder builder, Object value)","    @Override void perform(RequestBuilder builder, Map<?, ?> value)"
+4b2e64fc3eb777c2bc109527d5d77b05b347207e,RequestAction.java,"    @Override void perform(RequestBuilder builder, Object value)","    @Override void perform(RequestBuilder builder, Map<?, ?> value)"
+3341d2bd10941bd98c385dbfb219dbed41819f66,RequestAction.java,"    @Override void perform(RequestBuilder builder, Object value)","    @Override void perform(RequestBuilder builder, Map<?, ?> value)"
+3341d2bd10941bd98c385dbfb219dbed41819f66,RequestAction.java,"    @Override void perform(RequestBuilder builder, Object value)","    @Override void perform(RequestBuilder builder, Map<?, ?> value)"
+3341d2bd10941bd98c385dbfb219dbed41819f66,RequestAction.java,"    @Override void perform(RequestBuilder builder, Object value)","    @Override void perform(RequestBuilder builder, Map<?, ?> value)"
+138e2bd3c01d5dd67308d1112174bf210a03178f,Result.java,import static retrofit.Utils.checkNotNull;,import static retrofit2.Utils.checkNotNull;
+138e2bd3c01d5dd67308d1112174bf210a03178f,RxJavaCallAdapterFactoryTest.java,import retrofit.http.GET;,import retrofit2.http.GET;
+138e2bd3c01d5dd67308d1112174bf210a03178f,GsonConverterFactoryTest.java,import retrofit.http.POST;,import retrofit2.http.Body;
+138e2bd3c01d5dd67308d1112174bf210a03178f,JacksonConverterFactoryTest.java,import retrofit.http.POST;,import retrofit2.http.Body;
+138e2bd3c01d5dd67308d1112174bf210a03178f,MoshiConverterFactoryTest.java,import retrofit.http.POST;,import retrofit2.http.Body;
+138e2bd3c01d5dd67308d1112174bf210a03178f,ProtoConverterFactoryTest.java,import retrofit.http.POST;,import retrofit2.http.Body;
+138e2bd3c01d5dd67308d1112174bf210a03178f,ProtoConverterFactoryTest.java,import static retrofit.PhoneProtos.Phone;,import static retrofit2.PhoneProtos.Phone;
+138e2bd3c01d5dd67308d1112174bf210a03178f,ScalarsConverterFactoryTest.java,import retrofit.http.POST;,import retrofit2.http.Body;
+138e2bd3c01d5dd67308d1112174bf210a03178f,SimpleXmlConverterFactoryTest.java,import retrofit.http.POST;,import retrofit2.http.Body;
+138e2bd3c01d5dd67308d1112174bf210a03178f,WireConverterFactoryTest.java,import retrofit.http.POST;,import retrofit2.http.Body;
+138e2bd3c01d5dd67308d1112174bf210a03178f,BehaviorCall.java,import retrofit.Response;,import retrofit2.Call;
+138e2bd3c01d5dd67308d1112174bf210a03178f,CallBehaviorAdapter.java,import retrofit.Retrofit;,import retrofit2.Call;
+138e2bd3c01d5dd67308d1112174bf210a03178f,Calls.java,import retrofit.Response;,import retrofit2.Call;
+138e2bd3c01d5dd67308d1112174bf210a03178f,MockRetrofitTest.java,import retrofit.mock.NetworkBehavior;,import retrofit2.Call;
+138e2bd3c01d5dd67308d1112174bf210a03178f,BuiltInConverters.java,import retrofit.http.Streaming;,import retrofit2.http.Streaming;
+138e2bd3c01d5dd67308d1112174bf210a03178f,Converter.java,import retrofit.http.QueryMap;,import retrofit2.http.Body;
+138e2bd3c01d5dd67308d1112174bf210a03178f,OkHttpCall.java,import static retrofit.Utils.closeQuietly;,import static retrofit2.Utils.closeQuietly;
+138e2bd3c01d5dd67308d1112174bf210a03178f,RequestAction.java,import static retrofit.Utils.checkNotNull;,import static retrofit2.Utils.checkNotNull;
+138e2bd3c01d5dd67308d1112174bf210a03178f,RequestFactoryParser.java,import static retrofit.Utils.methodError;,import retrofit2.http.Body;
+138e2bd3c01d5dd67308d1112174bf210a03178f,Retrofit.java,import retrofit.http.Header;,import retrofit2.http.GET;
+138e2bd3c01d5dd67308d1112174bf210a03178f,Retrofit.java,import static retrofit.Utils.checkNotNull;,import static retrofit2.Utils.checkNotNull;
+138e2bd3c01d5dd67308d1112174bf210a03178f,Body.java,import retrofit.Retrofit;,import retrofit2.Converter;
+138e2bd3c01d5dd67308d1112174bf210a03178f,Part.java,import retrofit.Converter;,import retrofit2.Converter;
+138e2bd3c01d5dd67308d1112174bf210a03178f,PartMap.java,import retrofit.Converter;,import retrofit2.Converter;
+138e2bd3c01d5dd67308d1112174bf210a03178f,Url.java,import retrofit.Retrofit;,import retrofit2.Retrofit;
+138e2bd3c01d5dd67308d1112174bf210a03178f,CallTest.java,import retrofit.http.Streaming;,import retrofit2.http.Body;
+138e2bd3c01d5dd67308d1112174bf210a03178f,RequestBuilderTest.java,import retrofit.http.Url;,import retrofit2.http.Body;
+138e2bd3c01d5dd67308d1112174bf210a03178f,RetrofitTest.java,import retrofit.http.Query;,import retrofit2.http.Body;
+138e2bd3c01d5dd67308d1112174bf210a03178f,ChunkingConverter.java,import retrofit.http.POST;,import retrofit2.Call;
+138e2bd3c01d5dd67308d1112174bf210a03178f,CustomCallAdapter.java,import retrofit.http.GET;,import retrofit2.Call;
+138e2bd3c01d5dd67308d1112174bf210a03178f,DeserializeErrorBody.java,import retrofit.http.GET;,import retrofit2.Call;
+138e2bd3c01d5dd67308d1112174bf210a03178f,ErrorHandlingCallAdapter.java,import retrofit.http.GET;,import retrofit2.Call;
+138e2bd3c01d5dd67308d1112174bf210a03178f,SimpleMockService.java,import retrofit.mock.NetworkBehavior;,import retrofit2.Call;
+138e2bd3c01d5dd67308d1112174bf210a03178f,SimpleService.java,import retrofit.http.Path;,import retrofit2.Call;
+2ea316cde780a752cf5175539f5246a44c929dc9,Result.java,import static retrofit.Utils.checkNotNull;,import static retrofit2.Utils.checkNotNull;
+2ea316cde780a752cf5175539f5246a44c929dc9,RxJavaCallAdapterFactoryTest.java,import retrofit.http.GET;,import retrofit2.http.GET;
+2ea316cde780a752cf5175539f5246a44c929dc9,GsonConverterFactoryTest.java,import retrofit.http.POST;,import retrofit2.http.Body;
+2ea316cde780a752cf5175539f5246a44c929dc9,JacksonConverterFactoryTest.java,import retrofit.http.POST;,import retrofit2.http.Body;
+2ea316cde780a752cf5175539f5246a44c929dc9,MoshiConverterFactoryTest.java,import retrofit.http.POST;,import retrofit2.http.Body;
+2ea316cde780a752cf5175539f5246a44c929dc9,ProtoConverterFactoryTest.java,import retrofit.http.POST;,import retrofit2.http.Body;
+2ea316cde780a752cf5175539f5246a44c929dc9,ProtoConverterFactoryTest.java,import static retrofit.PhoneProtos.Phone;,import static retrofit2.PhoneProtos.Phone;
+2ea316cde780a752cf5175539f5246a44c929dc9,ScalarsConverterFactoryTest.java,import retrofit.http.POST;,import retrofit2.http.Body;
+2ea316cde780a752cf5175539f5246a44c929dc9,SimpleXmlConverterFactoryTest.java,import retrofit.http.POST;,import retrofit2.http.Body;
+2ea316cde780a752cf5175539f5246a44c929dc9,WireConverterFactoryTest.java,import retrofit.http.POST;,import retrofit2.http.Body;
+2ea316cde780a752cf5175539f5246a44c929dc9,BehaviorCall.java,import retrofit.Response;,import retrofit2.Call;
+2ea316cde780a752cf5175539f5246a44c929dc9,CallBehaviorAdapter.java,import retrofit.Retrofit;,import retrofit2.Call;
+2ea316cde780a752cf5175539f5246a44c929dc9,Calls.java,import retrofit.Response;,import retrofit2.Call;
+2ea316cde780a752cf5175539f5246a44c929dc9,MockRetrofitTest.java,import retrofit.mock.NetworkBehavior;,import retrofit2.Call;
+2ea316cde780a752cf5175539f5246a44c929dc9,BuiltInConverters.java,import retrofit.http.Streaming;,import retrofit2.http.Streaming;
+2ea316cde780a752cf5175539f5246a44c929dc9,Converter.java,import retrofit.http.QueryMap;,import retrofit2.http.Body;
+2ea316cde780a752cf5175539f5246a44c929dc9,OkHttpCall.java,import static retrofit.Utils.closeQuietly;,import static retrofit2.Utils.closeQuietly;
+2ea316cde780a752cf5175539f5246a44c929dc9,RequestAction.java,import static retrofit.Utils.checkNotNull;,import static retrofit2.Utils.checkNotNull;
+2ea316cde780a752cf5175539f5246a44c929dc9,RequestFactoryParser.java,import static retrofit.Utils.methodError;,import retrofit2.http.Body;
+2ea316cde780a752cf5175539f5246a44c929dc9,Retrofit.java,import retrofit.http.Header;,import retrofit2.http.GET;
+2ea316cde780a752cf5175539f5246a44c929dc9,Retrofit.java,import static retrofit.Utils.checkNotNull;,import static retrofit2.Utils.checkNotNull;
+2ea316cde780a752cf5175539f5246a44c929dc9,Body.java,import retrofit.Retrofit;,import retrofit2.Converter;
+2ea316cde780a752cf5175539f5246a44c929dc9,Part.java,import retrofit.Converter;,import retrofit2.Converter;
+2ea316cde780a752cf5175539f5246a44c929dc9,PartMap.java,import retrofit.Converter;,import retrofit2.Converter;
+2ea316cde780a752cf5175539f5246a44c929dc9,Url.java,import retrofit.Retrofit;,import retrofit2.Retrofit;
+2ea316cde780a752cf5175539f5246a44c929dc9,CallTest.java,import retrofit.http.Streaming;,import retrofit2.http.Body;
+2ea316cde780a752cf5175539f5246a44c929dc9,RequestBuilderTest.java,import retrofit.http.Url;,import retrofit2.http.Body;
+2ea316cde780a752cf5175539f5246a44c929dc9,RetrofitTest.java,import retrofit.http.Query;,import retrofit2.http.Body;
+2ea316cde780a752cf5175539f5246a44c929dc9,ChunkingConverter.java,import retrofit.http.POST;,import retrofit2.Call;
+2ea316cde780a752cf5175539f5246a44c929dc9,CustomCallAdapter.java,import retrofit.http.GET;,import retrofit2.Call;
+2ea316cde780a752cf5175539f5246a44c929dc9,DeserializeErrorBody.java,import retrofit.http.GET;,import retrofit2.Call;
+2ea316cde780a752cf5175539f5246a44c929dc9,ErrorHandlingCallAdapter.java,import retrofit.http.GET;,import retrofit2.Call;
+2ea316cde780a752cf5175539f5246a44c929dc9,SimpleMockService.java,import retrofit.mock.NetworkBehavior;,import retrofit2.Call;
+2ea316cde780a752cf5175539f5246a44c929dc9,SimpleService.java,import retrofit.http.Path;,import retrofit2.Call;
+1650442019f8543c9216fd6f7f6b7db1718b909e,MockRetrofit.java,import java.lang.reflect.Proxy;,import retrofit2.Retrofit;
+1650442019f8543c9216fd6f7f6b7db1718b909e,SimpleMockService.java,import java.util.concurrent.Executors;,import java.util.concurrent.TimeUnit;
+1650442019f8543c9216fd6f7f6b7db1718b909e,SimpleMockService.java,import retrofit2.mock.Calls;,import retrofit2.mock.BehaviorDelegate;
+d1782df6a3ba555aa6f762971e42872b98feab9f,MockRetrofit.java,import java.lang.reflect.Proxy;,import retrofit2.Retrofit;
+d1782df6a3ba555aa6f762971e42872b98feab9f,SimpleMockService.java,import java.util.concurrent.Executors;,import java.util.concurrent.TimeUnit;
+d1782df6a3ba555aa6f762971e42872b98feab9f,SimpleMockService.java,import retrofit2.mock.Calls;,import retrofit2.mock.BehaviorDelegate;
+4cd675dcda829a9ec613770105909ab9cb36e722,MockRetrofitTest.java,import org.junit.Before;,import java.util.concurrent.ExecutorService;
+2b68ba8e6e8cba7042975f3c188ac59f7760b431,MockRetrofitTest.java,import org.junit.Before;,import java.util.concurrent.ExecutorService;
+ac5064b4a9e773b8847b26462afb3be83095e3d9,RxJavaCallAdapterFactoryTest.java,import static com.squareup.okhttp.mockwebserver.SocketPolicy.DISCONNECT_AFTER_REQUEST;,import static okhttp3.mockwebserver.SocketPolicy.DISCONNECT_AFTER_REQUEST;
+ac5064b4a9e773b8847b26462afb3be83095e3d9,BaseUrl.java,import com.squareup.okhttp.HttpUrl;,import okhttp3.HttpUrl;
+ac5064b4a9e773b8847b26462afb3be83095e3d9,OkHttpCallFactory.java,import com.squareup.okhttp.ResponseBody;,import okhttp3.OkHttpClient;
+ac5064b4a9e773b8847b26462afb3be83095e3d9,Response.java,import com.squareup.okhttp.ResponseBody;,import okhttp3.Headers;
+ac5064b4a9e773b8847b26462afb3be83095e3d9,ResponseTest.java,import com.squareup.okhttp.ResponseBody;,import okhttp3.Protocol;
+ccd17ca9d5ed60e3f5468ed3cd2e90be22a87c1d,RxJavaCallAdapterFactoryTest.java,import static com.squareup.okhttp.mockwebserver.SocketPolicy.DISCONNECT_AFTER_REQUEST;,import static okhttp3.mockwebserver.SocketPolicy.DISCONNECT_AFTER_REQUEST;
+ccd17ca9d5ed60e3f5468ed3cd2e90be22a87c1d,BaseUrl.java,import com.squareup.okhttp.HttpUrl;,import okhttp3.HttpUrl;
+ccd17ca9d5ed60e3f5468ed3cd2e90be22a87c1d,OkHttpCallFactory.java,import com.squareup.okhttp.ResponseBody;,import okhttp3.OkHttpClient;
+ccd17ca9d5ed60e3f5468ed3cd2e90be22a87c1d,Response.java,import com.squareup.okhttp.ResponseBody;,import okhttp3.Headers;
+ccd17ca9d5ed60e3f5468ed3cd2e90be22a87c1d,ResponseTest.java,import com.squareup.okhttp.ResponseBody;,import okhttp3.Protocol;
+9d0cca1b31e58990b0fcc693e013f0328ea3f376,BehaviorCall.java,            @Override public void onResponse(final Response<T> response),"            @Override public void onResponse(Call<T> call, Response<T> response)"
+9d0cca1b31e58990b0fcc693e013f0328ea3f376,BehaviorCall.java,            @Override public void onFailure(final Throwable t),"            @Override public void onFailure(Call<T> call, Throwable t)"
+9d0cca1b31e58990b0fcc693e013f0328ea3f376,BehaviorCall.java,      @Override public void onResponse(Response<T> response),"      @Override public void onResponse(Call<T> call, Response<T> response)"
+9d0cca1b31e58990b0fcc693e013f0328ea3f376,BehaviorCall.java,      @Override public void onFailure(Throwable t),"      @Override public void onFailure(Call<T> call, Throwable t)"
+9d0cca1b31e58990b0fcc693e013f0328ea3f376,BehaviorDelegateTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Call<String> call, Response<String> response)"
+9d0cca1b31e58990b0fcc693e013f0328ea3f376,BehaviorDelegateTest.java,      @Override public void onFailure(Throwable t),"      @Override public void onFailure(Call<String> call, Throwable t)"
+9d0cca1b31e58990b0fcc693e013f0328ea3f376,BehaviorDelegateTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Call<String> call, Response<String> response)"
+9d0cca1b31e58990b0fcc693e013f0328ea3f376,BehaviorDelegateTest.java,      @Override public void onFailure(Throwable t),"      @Override public void onFailure(Call<String> call, Throwable t)"
+9d0cca1b31e58990b0fcc693e013f0328ea3f376,BehaviorDelegateTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Call<String> call, Response<String> response)"
+9d0cca1b31e58990b0fcc693e013f0328ea3f376,BehaviorDelegateTest.java,      @Override public void onFailure(Throwable t),"      @Override public void onFailure(Call<String> call, Throwable t)"
+9d0cca1b31e58990b0fcc693e013f0328ea3f376,BehaviorDelegateTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Call<String> call, Response<String> response)"
+9d0cca1b31e58990b0fcc693e013f0328ea3f376,BehaviorDelegateTest.java,      @Override public void onFailure(Throwable t),"      @Override public void onFailure(Call<String> call, Throwable t)"
+9d0cca1b31e58990b0fcc693e013f0328ea3f376,BehaviorDelegateTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Call<String> call, Response<String> response)"
+9d0cca1b31e58990b0fcc693e013f0328ea3f376,BehaviorDelegateTest.java,      @Override public void onFailure(Throwable t),"      @Override public void onFailure(Call<String> call, Throwable t)"
+9d0cca1b31e58990b0fcc693e013f0328ea3f376,Callback.java,  void onResponse(Response<T> response),"  void onResponse(Call<T> call, Response<T> response)"
+9d0cca1b31e58990b0fcc693e013f0328ea3f376,Callback.java,  void onFailure(Throwable t),"  void onFailure(Call<T> call, Throwable t)"
+9d0cca1b31e58990b0fcc693e013f0328ea3f376,ExecutorCallAdapterFactory.java,        @Override public void onResponse(final Response<T> response),"        @Override public void onResponse(final Call<T> call, final Response<T> response)"
+9d0cca1b31e58990b0fcc693e013f0328ea3f376,ExecutorCallAdapterFactory.java,        @Override public void onFailure(final Throwable t),"        @Override public void onFailure(final Call<T> call, final Throwable t)"
+9d0cca1b31e58990b0fcc693e013f0328ea3f376,CallTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Call<String> call, Response<String> response)"
+9d0cca1b31e58990b0fcc693e013f0328ea3f376,CallTest.java,      @Override public void onFailure(Throwable t),"      @Override public void onFailure(Call<String> call, Throwable t)"
+9d0cca1b31e58990b0fcc693e013f0328ea3f376,CallTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Call<String> call, Response<String> response)"
+9d0cca1b31e58990b0fcc693e013f0328ea3f376,CallTest.java,      @Override public void onFailure(Throwable t),"      @Override public void onFailure(Call<String> call, Throwable t)"
+9d0cca1b31e58990b0fcc693e013f0328ea3f376,CallTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Call<String> call, Response<String> response)"
+9d0cca1b31e58990b0fcc693e013f0328ea3f376,CallTest.java,      @Override public void onFailure(Throwable t),"      @Override public void onFailure(Call<String> call, Throwable t)"
+9d0cca1b31e58990b0fcc693e013f0328ea3f376,CallTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Call<String> call, Response<String> response)"
+9d0cca1b31e58990b0fcc693e013f0328ea3f376,CallTest.java,      @Override public void onFailure(Throwable t),"      @Override public void onFailure(Call<String> call, Throwable t)"
+9d0cca1b31e58990b0fcc693e013f0328ea3f376,CallTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Call<String> call, Response<String> response)"
+9d0cca1b31e58990b0fcc693e013f0328ea3f376,CallTest.java,      @Override public void onFailure(Throwable t),"      @Override public void onFailure(Call<String> call, Throwable t)"
+9d0cca1b31e58990b0fcc693e013f0328ea3f376,CallTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Call<String> call, Response<String> response)"
+9d0cca1b31e58990b0fcc693e013f0328ea3f376,CallTest.java,      @Override public void onFailure(Throwable t),"      @Override public void onFailure(Call<String> call, Throwable t)"
+9d0cca1b31e58990b0fcc693e013f0328ea3f376,CallTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Call<String> call, Response<String> response)"
+9d0cca1b31e58990b0fcc693e013f0328ea3f376,CallTest.java,      @Override public void onFailure(Throwable t),"      @Override public void onFailure(Call<String> call, Throwable t)"
+9d0cca1b31e58990b0fcc693e013f0328ea3f376,RetrofitTest.java,      @Override public void onResponse(Response<ResponseBody> response),"      @Override public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response)"
+9d0cca1b31e58990b0fcc693e013f0328ea3f376,RetrofitTest.java,      @Override public void onFailure(Throwable t),"      @Override public void onFailure(Call<ResponseBody> call, Throwable t)"
+9d0cca1b31e58990b0fcc693e013f0328ea3f376,RetrofitTest.java,      @Override public void onResponse(Response<ResponseBody> response),"      @Override public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response)"
+9d0cca1b31e58990b0fcc693e013f0328ea3f376,RetrofitTest.java,      @Override public void onFailure(Throwable t),"      @Override public void onFailure(Call<ResponseBody> call, Throwable t)"
+9d0cca1b31e58990b0fcc693e013f0328ea3f376,CustomCallAdapter.java,      @Override public void onResponse(Response<T> response),"      @Override public void onResponse(Call<T> call, Response<T> response)"
+9d0cca1b31e58990b0fcc693e013f0328ea3f376,CustomCallAdapter.java,      @Override public void onFailure(Throwable t),"      @Override public void onFailure(Call<T> call, Throwable t)"
+9d0cca1b31e58990b0fcc693e013f0328ea3f376,ErrorHandlingCallAdapter.java,        @Override public void onResponse(Response<T> response),"        @Override public void onResponse(Call<T> call, Response<T> response)"
+9d0cca1b31e58990b0fcc693e013f0328ea3f376,ErrorHandlingCallAdapter.java,        @Override public void onFailure(Throwable t),"        @Override public void onFailure(Call<T> call, Throwable t)"
+bbc64007c33e5e3a78b1b0ce858bc6232443a83b,BehaviorCall.java,            @Override public void onResponse(final Response<T> response),"            @Override public void onResponse(Call<T> call, Response<T> response)"
+bbc64007c33e5e3a78b1b0ce858bc6232443a83b,BehaviorCall.java,            @Override public void onFailure(final Throwable t),"            @Override public void onFailure(Call<T> call, Throwable t)"
+bbc64007c33e5e3a78b1b0ce858bc6232443a83b,BehaviorCall.java,      @Override public void onResponse(Response<T> response),"      @Override public void onResponse(Call<T> call, Response<T> response)"
+bbc64007c33e5e3a78b1b0ce858bc6232443a83b,BehaviorCall.java,      @Override public void onFailure(Throwable t),"      @Override public void onFailure(Call<T> call, Throwable t)"
+bbc64007c33e5e3a78b1b0ce858bc6232443a83b,BehaviorDelegateTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Call<String> call, Response<String> response)"
+bbc64007c33e5e3a78b1b0ce858bc6232443a83b,BehaviorDelegateTest.java,      @Override public void onFailure(Throwable t),"      @Override public void onFailure(Call<String> call, Throwable t)"
+bbc64007c33e5e3a78b1b0ce858bc6232443a83b,BehaviorDelegateTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Call<String> call, Response<String> response)"
+bbc64007c33e5e3a78b1b0ce858bc6232443a83b,BehaviorDelegateTest.java,      @Override public void onFailure(Throwable t),"      @Override public void onFailure(Call<String> call, Throwable t)"
+bbc64007c33e5e3a78b1b0ce858bc6232443a83b,BehaviorDelegateTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Call<String> call, Response<String> response)"
+bbc64007c33e5e3a78b1b0ce858bc6232443a83b,BehaviorDelegateTest.java,      @Override public void onFailure(Throwable t),"      @Override public void onFailure(Call<String> call, Throwable t)"
+bbc64007c33e5e3a78b1b0ce858bc6232443a83b,BehaviorDelegateTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Call<String> call, Response<String> response)"
+bbc64007c33e5e3a78b1b0ce858bc6232443a83b,BehaviorDelegateTest.java,      @Override public void onFailure(Throwable t),"      @Override public void onFailure(Call<String> call, Throwable t)"
+bbc64007c33e5e3a78b1b0ce858bc6232443a83b,BehaviorDelegateTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Call<String> call, Response<String> response)"
+bbc64007c33e5e3a78b1b0ce858bc6232443a83b,BehaviorDelegateTest.java,      @Override public void onFailure(Throwable t),"      @Override public void onFailure(Call<String> call, Throwable t)"
+bbc64007c33e5e3a78b1b0ce858bc6232443a83b,Callback.java,  void onResponse(Response<T> response),"  void onResponse(Call<T> call, Response<T> response)"
+bbc64007c33e5e3a78b1b0ce858bc6232443a83b,Callback.java,  void onFailure(Throwable t),"  void onFailure(Call<T> call, Throwable t)"
+bbc64007c33e5e3a78b1b0ce858bc6232443a83b,ExecutorCallAdapterFactory.java,        @Override public void onResponse(final Response<T> response),"        @Override public void onResponse(final Call<T> call, final Response<T> response)"
+bbc64007c33e5e3a78b1b0ce858bc6232443a83b,ExecutorCallAdapterFactory.java,        @Override public void onFailure(final Throwable t),"        @Override public void onFailure(final Call<T> call, final Throwable t)"
+bbc64007c33e5e3a78b1b0ce858bc6232443a83b,CallTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Call<String> call, Response<String> response)"
+bbc64007c33e5e3a78b1b0ce858bc6232443a83b,CallTest.java,      @Override public void onFailure(Throwable t),"      @Override public void onFailure(Call<String> call, Throwable t)"
+bbc64007c33e5e3a78b1b0ce858bc6232443a83b,CallTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Call<String> call, Response<String> response)"
+bbc64007c33e5e3a78b1b0ce858bc6232443a83b,CallTest.java,      @Override public void onFailure(Throwable t),"      @Override public void onFailure(Call<String> call, Throwable t)"
+bbc64007c33e5e3a78b1b0ce858bc6232443a83b,CallTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Call<String> call, Response<String> response)"
+bbc64007c33e5e3a78b1b0ce858bc6232443a83b,CallTest.java,      @Override public void onFailure(Throwable t),"      @Override public void onFailure(Call<String> call, Throwable t)"
+bbc64007c33e5e3a78b1b0ce858bc6232443a83b,CallTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Call<String> call, Response<String> response)"
+bbc64007c33e5e3a78b1b0ce858bc6232443a83b,CallTest.java,      @Override public void onFailure(Throwable t),"      @Override public void onFailure(Call<String> call, Throwable t)"
+bbc64007c33e5e3a78b1b0ce858bc6232443a83b,CallTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Call<String> call, Response<String> response)"
+bbc64007c33e5e3a78b1b0ce858bc6232443a83b,CallTest.java,      @Override public void onFailure(Throwable t),"      @Override public void onFailure(Call<String> call, Throwable t)"
+bbc64007c33e5e3a78b1b0ce858bc6232443a83b,CallTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Call<String> call, Response<String> response)"
+bbc64007c33e5e3a78b1b0ce858bc6232443a83b,CallTest.java,      @Override public void onFailure(Throwable t),"      @Override public void onFailure(Call<String> call, Throwable t)"
+bbc64007c33e5e3a78b1b0ce858bc6232443a83b,CallTest.java,      @Override public void onResponse(Response<String> response),"      @Override public void onResponse(Call<String> call, Response<String> response)"
+bbc64007c33e5e3a78b1b0ce858bc6232443a83b,CallTest.java,      @Override public void onFailure(Throwable t),"      @Override public void onFailure(Call<String> call, Throwable t)"
+bbc64007c33e5e3a78b1b0ce858bc6232443a83b,RetrofitTest.java,      @Override public void onResponse(Response<ResponseBody> response),"      @Override public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response)"
+bbc64007c33e5e3a78b1b0ce858bc6232443a83b,RetrofitTest.java,      @Override public void onFailure(Throwable t),"      @Override public void onFailure(Call<ResponseBody> call, Throwable t)"
+bbc64007c33e5e3a78b1b0ce858bc6232443a83b,RetrofitTest.java,      @Override public void onResponse(Response<ResponseBody> response),"      @Override public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response)"
+bbc64007c33e5e3a78b1b0ce858bc6232443a83b,RetrofitTest.java,      @Override public void onFailure(Throwable t),"      @Override public void onFailure(Call<ResponseBody> call, Throwable t)"
+bbc64007c33e5e3a78b1b0ce858bc6232443a83b,CustomCallAdapter.java,      @Override public void onResponse(Response<T> response),"      @Override public void onResponse(Call<T> call, Response<T> response)"
+bbc64007c33e5e3a78b1b0ce858bc6232443a83b,CustomCallAdapter.java,      @Override public void onFailure(Throwable t),"      @Override public void onFailure(Call<T> call, Throwable t)"
+bbc64007c33e5e3a78b1b0ce858bc6232443a83b,ErrorHandlingCallAdapter.java,        @Override public void onResponse(Response<T> response),"        @Override public void onResponse(Call<T> call, Response<T> response)"
+bbc64007c33e5e3a78b1b0ce858bc6232443a83b,ErrorHandlingCallAdapter.java,        @Override public void onFailure(Throwable t),"        @Override public void onFailure(Call<T> call, Throwable t)"
+fcc61f76f9efb1daf04fa124c9fecd7b0fec6036,RxJavaCallAdapterFactoryTest.java,  },    Type oResponseClass = new TypeToken<Observable<Response<String>>>() {}.getType();
+fcc61f76f9efb1daf04fa124c9fecd7b0fec6036,RxJavaCallAdapterFactoryTest.java,"    assertThat(factory.get(resultType, NO_ANNOTATIONS, retrofit).responseType())",    Type sResultClass = new TypeToken<Single<Result<String>>>() {}.getType();
+640bac5d67be978d000f312bbadec7211ed0dafd,RxJavaCallAdapterFactoryTest.java,  },    Type oResponseClass = new TypeToken<Observable<Response<String>>>() {}.getType();
+640bac5d67be978d000f312bbadec7211ed0dafd,RxJavaCallAdapterFactoryTest.java,"    assertThat(factory.get(resultType, NO_ANNOTATIONS, retrofit).responseType())",    Type sResultClass = new TypeToken<Single<Result<String>>>() {}.getType();
+28ed8d7e816a334581c1517da6f8eb91e7cb4159,Platform.java,import java.lang.invoke.MethodHandles;,import java.lang.invoke.MethodHandles.Lookup;
+09d430c46890bb6d3dee5308b25c828122cd354a,Platform.java,import java.lang.invoke.MethodHandles;,import java.lang.invoke.MethodHandles.Lookup;
+0e4fe60b4b5c19bb2a60e201b4518f988d4da613,ProtoConverterFactoryTest.java,import static retrofit2.PhoneProtos.Phone;,import static retrofit2.converter.protobuf.PhoneProtos.Phone;
+0e4fe60b4b5c19bb2a60e201b4518f988d4da613,ScalarsConverterFactory.java,import retrofit2.ScalarResponseBodyConverters.StringResponseBodyConverter;,import retrofit2.Converter;
+0e4fe60b4b5c19bb2a60e201b4518f988d4da613,ChunkingConverter.java,import retrofit2.GsonConverterFactory;,import retrofit2.converter.gson.GsonConverterFactory;
+0e4fe60b4b5c19bb2a60e201b4518f988d4da613,DeserializeErrorBody.java,import retrofit2.GsonConverterFactory;,import retrofit2.converter.gson.GsonConverterFactory;
+0e4fe60b4b5c19bb2a60e201b4518f988d4da613,ErrorHandlingCallAdapter.java,import retrofit2.GsonConverterFactory;,import retrofit2.converter.gson.GsonConverterFactory;
+0e4fe60b4b5c19bb2a60e201b4518f988d4da613,SimpleService.java,import retrofit2.GsonConverterFactory;,import retrofit2.converter.gson.GsonConverterFactory;
+55f90df88cf7be75ceabf2de2cbd56e69b7482d5,ProtoConverterFactoryTest.java,import static retrofit2.PhoneProtos.Phone;,import static retrofit2.converter.protobuf.PhoneProtos.Phone;
+55f90df88cf7be75ceabf2de2cbd56e69b7482d5,ScalarsConverterFactory.java,import retrofit2.ScalarResponseBodyConverters.StringResponseBodyConverter;,import retrofit2.Converter;
+55f90df88cf7be75ceabf2de2cbd56e69b7482d5,ChunkingConverter.java,import retrofit2.GsonConverterFactory;,import retrofit2.converter.gson.GsonConverterFactory;
+55f90df88cf7be75ceabf2de2cbd56e69b7482d5,DeserializeErrorBody.java,import retrofit2.GsonConverterFactory;,import retrofit2.converter.gson.GsonConverterFactory;
+55f90df88cf7be75ceabf2de2cbd56e69b7482d5,ErrorHandlingCallAdapter.java,import retrofit2.GsonConverterFactory;,import retrofit2.converter.gson.GsonConverterFactory;
+55f90df88cf7be75ceabf2de2cbd56e69b7482d5,SimpleService.java,import retrofit2.GsonConverterFactory;,import retrofit2.converter.gson.GsonConverterFactory;
+8c97b851facbbb14d7d47d128679ded9dad99776,Result.java,import static retrofit2.Utils.checkNotNull;,import retrofit2.Response;
+683b8ec048b040b7d33374a58b8193081165bcd6,Result.java,import static retrofit2.Utils.checkNotNull;,import retrofit2.Response;
+999c72be0468664c711159cd53deff79e62ee4a1,SingleTest.java,import rx.singles.BlockingSingle;,import rx.observers.TestSubscriber;
+8345983fbf3ffb79f34e57ce93b63b8cd585cff0,SingleTest.java,import rx.singles.BlockingSingle;,import rx.observers.TestSubscriber;
+a12554ea1a6b72ec98a079ece934b6e7d25b6518,RequestFactoryAndroidTest.java,import static retrofit2.RequestBuilderTest.buildRequest;,import static retrofit2.RequestFactoryTest.buildRequest;
+cd333f70365952602a9ec35ac97cff0c20e3a132,RequestFactoryAndroidTest.java,import static retrofit2.RequestBuilderTest.buildRequest;,import static retrofit2.RequestFactoryTest.buildRequest;
+f939189f3b825beb66a499686b9f6ca0f3a70cc1,RequestFactory.java,import java.util.Arrays;,import java.util.ArrayList;
+ec0b35de98d43f004347675bf91139e48f562c17,RequestFactory.java,import java.util.Arrays;,import java.util.ArrayList;
+05019fc4bcd9bcdc4d1d0b458c8a159b7a73b2fb,ScalaCallAdapterFactory.java,import javax.annotation.Nonnull;,import javax.annotation.Nullable;
+d7ea2bd6f9243165bb0cbf5eda277b92e812a478,ScalaCallAdapterFactory.java,import javax.annotation.Nonnull;,import javax.annotation.Nullable;
+0e57bbf9fdd61aa6716a8104117425f5e7c0127d,TestingUtils.java,  public static Method onlyMethod(Class c) {,final class TestingUtils {
+c2b930c9c74c185d8dbc1742b0fedede29aaf6be,TestingUtils.java,  public static Method onlyMethod(Class c) {,final class TestingUtils {
+154,8,582,1

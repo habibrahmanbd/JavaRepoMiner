@@ -11,8 +11,8 @@ import csv
 from pydriller import RepositoryMining
 
 
-def WriteReport(Result):
-    with open("Outputs/RxJava.csv", "w") as fileName:
+def WriteReport(Result, ResultFileName):
+    with open("Outputs/"+ResultFileName+".csv", "w") as fileName:
         writer = csv.writer(fileName)
         writer.writerow(["Commit SHA", "Java File", "Old function signature", "New function signature"])
         writer.writerows(Result)
@@ -233,6 +233,7 @@ def RepoMiner(gitName):
 
 if __name__ == "__main__":
     GitFileName = input("Enter the git name with path: ")  # Repository name with Path
+    GitResultFile = input("Result File Name: ") # Name for result file
     Result = RepoMiner(GitFileName)  # Finds the Result
-    WriteReport(Result)  # Print to CSV
+    WriteReport(Result, GitResultFile)  # Print to CSV
     print("\nOutput printed successfully...")
